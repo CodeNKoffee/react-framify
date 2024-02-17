@@ -19,9 +19,9 @@
   "author": "Hatem Soliman hatemthedev@gmail.com",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/yourusername/react-framify/issues"
+    "url": "https://github.com/CodeNKoffee/react-framify/issues"
   },
-  "homepage": "https://github.com/yourusername/react-framify#readme",
+  "homepage": "https://react-framify.netlify.app/",
   "peerDependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
