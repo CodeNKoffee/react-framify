@@ -1,0 +1,74 @@
+.preview__phone--mockup {
+  margin-top: 380px;
+}
+
+.phone__frameset--wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250.375px;
+  height: 507.5px;
+}
+
+.phone__frameset {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.phone__frameset:hover {
+  cursor: grab;
+}
+
+.phone__frameset--img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 32px;
+  width: 92%;
+  height: 97%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+.phone__frameset--img.fade-out {
+  opacity: 0;
+}
+
+.preview__scroll--btns {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.preview__scroll--btn {
+  border-radius: 16px;
+  border: none;
+  background-color: #004F98;
+  color: #FFF;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  padding: 8px 16px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.preview__scroll--btn:hover {
+  color: #FFF;
+  transform: scale(1.08);
+}
+
+.preview__scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
