@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'production',
   module: {
     rules: [
       {
@@ -14,7 +15,7 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg)$/,
         use: {
-          loader: 'image-webpack-loader',
+          loader: 'file-loader',
         },
       },
       {

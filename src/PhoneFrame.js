@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PhoneFrameset from './assets/iphone-14-pro.png';
+import PhoneFrameset from './assets/iPhone14ProFrame.png';
 import '../styles/styles.css';
 
 const PhoneFrame = ({ screenshotList }) => {
@@ -8,7 +8,6 @@ const PhoneFrame = ({ screenshotList }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    console.log("Debugging inside useEffect: ", require('./assets/iphone-14-pro.png'));
     setCurrentImageIndex(0); // Reset the current image index when screenshotList changes
   }, [screenshotList]);
 
@@ -65,7 +64,6 @@ const PhoneFrame = ({ screenshotList }) => {
       onTouchEnd={handleTouchEnd}
     >
       <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" />
-      {console.log("Debugging inside the component itself: ", require('./assets/iphone-14-pro.png'))}
       <img
         src={screenshotList[currentImageIndex]}
         alt={screenshotList[i]}     // Added alternative text according to postion in array
