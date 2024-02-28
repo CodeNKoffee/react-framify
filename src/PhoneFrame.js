@@ -8,7 +8,7 @@ const PhoneFrame = ({ screenshotList }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    setCurrentImageIndex(0); // Reset the current image index when screenshotList changes
+    setCurrentImageIndex(0); 
   }, [screenshotList]);
 
   const handleTouchStart = (e) => {
@@ -24,10 +24,8 @@ const PhoneFrame = ({ screenshotList }) => {
     const touchDistance = currentTouchPosition - initialTouchPosition;
 
     if (touchDistance > 50) {
-      // Swipe right, show previous image
       showPreviousImage();
     } else if (touchDistance < -50) {
-      // Swipe left, show next image
       showNextImage();
     }
   };
@@ -66,7 +64,7 @@ const PhoneFrame = ({ screenshotList }) => {
       <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" />
       <img
         src={screenshotList[currentImageIndex]}
-        alt={screenshotList[i]}     // Added alternative text according to postion in array
+        alt={screenshotList[i]}    
         className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
       />
       <div className="preview__scroll--btns">

@@ -1,7 +1,9 @@
-// babel.config.js
 module.exports = {
   presets: [
-    '@babel/preset-react', // Add this line
-    '@babel/preset-env',  // Optional, but recommended
+    '@babel/preset-react', 
+    '@babel/preset-env',  
   ],
+  plugins: [
+    "@babel/plugin-syntax-jsx",
+  ]
 };
