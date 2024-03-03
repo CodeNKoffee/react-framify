@@ -3,13 +3,38 @@
     [
       "@babel/preset-env",
       {
-        "modules": false
+        "modules": false,
+        "targets": {
+          "node": "current"
+        }
       }
     ],
     "@babel/preset-react"
   ],
+  "env": {
+    "test": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        [
+          "@babel/plugin-proposal-class-properties",
+          {
+            "spec": true
+          }
+        ]
+      ]
+    }
+  },
   "plugins": [
-    "@babel/plugin-syntax-jsx",
-    "@babel/plugin-proposal-optional-chaining-assign"
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
+
