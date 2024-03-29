@@ -64,7 +64,6 @@ const PhoneFrame = ({ screenshotList }) => {
       <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" />
       <img
         src={screenshotList[currentImageIndex]}
-        alt={screenshotList[i]}    
         className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
       />
       <div className="preview__scroll--btns">
