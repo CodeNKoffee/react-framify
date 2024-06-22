@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
