@@ -1,1 +1,1 @@
-export { default as PhoneFrame } from "./PhoneFrame";
+export { default as PhoneFrame } from "./components/PhoneFrame";
