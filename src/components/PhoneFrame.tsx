@@ -1,5 +1,5 @@
 import React, { useEffect, useState, TouchEvent } from 'react';
-import PhoneFrameset from './assets/iPhone14ProFrame.png';
+import PhoneFrameset from '../assets/iPhone14ProFrame.png'
 import '../styles/styles.css';
 
 interface PhoneFrameProps {

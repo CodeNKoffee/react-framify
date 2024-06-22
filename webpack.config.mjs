@@ -1,3 +1,5 @@
+import path from 'path';
+
 export default {
   mode: 'production',
   resolve: {
@@ -8,7 +10,20 @@ export default {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-react', '@babel/preset-env'],
+            },
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
@@ -24,5 +39,10 @@ export default {
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  output: {
+    path: path.resolve('dist'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2',
   },
 };
