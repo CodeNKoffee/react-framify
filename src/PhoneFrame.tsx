@@ -1,23 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, TouchEvent } from 'react';
 import PhoneFrameset from './assets/iPhone14ProFrame.png';
 import '../styles/styles.css';
 
-const PhoneFrame = ({ screenshotList }: any) => {
+interface PhoneFrameProps {
+  screenshotList: string[];
+}
+
+const PhoneFrame: React.FC<PhoneFrameProps> = ({ screenshotList }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [initialTouchPosition, setInitialTouchPosition] = useState(null);
+  const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    setCurrentImageIndex(0); 
+    setCurrentImageIndex(0);
   }, [screenshotList]);
 
-  const handleTouchStart = (e:any) => {
+  const handleTouchStart = (e: TouchEvent) => {
     const touch = e.touches[0];
     setInitialTouchPosition(touch.clientX);
   };
 
-  const handleTouchMove = (e:any) => {
-    if (!initialTouchPosition) return;
+  const handleTouchMove = (e: TouchEvent) => {
+    if (initialTouchPosition === null) return;
 
     const touch = e.touches[0];
     const currentTouchPosition = touch.clientX;
