@@ -62,5 +62,9 @@
   "dependencies": {
     "file-loader": "^6.2.0",
     "react-scripts": "^5.0.1"
-  }
+  },
+  "files": [
+    "dist",
+    "assets"
+  ]
 }
