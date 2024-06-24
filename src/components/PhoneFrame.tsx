@@ -1,14 +1,14 @@
 "use client"
 
 import React, { useEffect, useState, TouchEvent } from 'react';
-import PhoneFrameset from '../assets/iPhone14ProFrame.png'
+import PhoneFrameset from '../assets/iPhone14ProFrame.png';
 import '../styles/styles.css';
 
 interface PhoneFrameProps {
   screenshotList: string[];
 }
 
-const PhoneFrame = ({ screenshotList }: PhoneFrameProps) => {
+export default function PhoneFrame({ screenshotList }: PhoneFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
@@ -78,6 +78,4 @@ const PhoneFrame = ({ screenshotList }: PhoneFrameProps) => {
       </div>
     </figure>
   );
-};
-
-export default PhoneFrame;
+}

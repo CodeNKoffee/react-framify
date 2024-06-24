@@ -1,3 +1,5 @@
 "use client"
 
-export { default as PhoneFrame } from "./components/PhoneFrame";
+import PhoneFrame from "./components/PhoneFrame";
+
+export default PhoneFrame;

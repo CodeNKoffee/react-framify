@@ -6,17 +6,12 @@ export default {
   output: {
     path: path.resolve('dist'),
     filename: 'index.js',
-    publicPath: '/',
     library: {
       type: 'umd',
       name: 'ReactFramify',
     },
     globalObject: 'this',
-    libraryTarget: 'commonjs2', // Ensure compatibility with Node.js
-  },
-  externals: {
-    react: 'react',
-    'react-dom': 'react-dom',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -48,12 +43,16 @@ export default {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        type: 'asset/resource', // Update to asset/resource for better compatibility
+        type: 'asset/resource',
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  externals: {
+    react: 'react',
+    'react-dom': 'react-dom',
   },
 };

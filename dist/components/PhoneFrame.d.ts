@@ -3,5 +3,5 @@ import '../styles/styles.css';
 interface PhoneFrameProps {
     screenshotList: string[];
 }
-declare const PhoneFrame: ({ screenshotList }: PhoneFrameProps) => React.JSX.Element;
-export default PhoneFrame;
+export default function PhoneFrame({ screenshotList }: PhoneFrameProps): React.JSX.Element;
+export {};
