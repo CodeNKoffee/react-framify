@@ -2,6 +2,22 @@ import path from 'path';
 
 export default {
   mode: 'production',
+  entry: './src/index.tsx',
+  output: {
+    path: path.resolve('dist'),
+    filename: 'index.js',
+    publicPath: '/',
+    library: {
+      type: 'umd',
+      name: 'ReactFramify',
+    },
+    globalObject: 'this',
+    libraryTarget: 'commonjs2', // Ensure compatibility with Node.js
+  },
+  externals: {
+    react: 'react',
+    'react-dom': 'react-dom',
+  },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
@@ -31,18 +47,13 @@ export default {
         use: 'babel-loader',
       },
       {
-        test: /\.(png|jpg|jpeg)$/,
-        use: 'file-loader',
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: 'asset/resource', // Update to asset/resource for better compatibility
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
-  },
-  output: {
-    path: path.resolve('dist'),
-    filename: 'index.js',
-    libraryTarget: 'commonjs2',
   },
 };
