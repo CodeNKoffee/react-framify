@@ -8,10 +8,10 @@ interface PhoneFrameProps {
   screenshotList: string[];
 }
 
-const PhoneFrame: React.FC<PhoneFrameProps> = ({ screenshotList }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const PhoneFrame = ({ screenshotList }: PhoneFrameProps) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
-  const [fadeOut, setFadeOut] = useState(false);
+  const [fadeOut, setFadeOut] = useState<boolean>(false);
 
   useEffect(() => {
     setCurrentImageIndex(0);
