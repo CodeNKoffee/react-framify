@@ -3,6 +3,11 @@ declare module 'PhoneFrame' {
   export default PhoneFrame;
 }
 
+declare module 'IPhoneFourteenPro' {
+  const IPhoneFourteenPro: React.ComponentType<any>;
+  export default IPhoneFourteenPro;
+}
+
 declare module "*.png" {
   const value: string;
   export default value;
