@@ -43,7 +43,10 @@ export default {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        type: 'asset/resource',
+        type: 'assets/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
       },
       {
         test: /\.css$/,
