@@ -1,10 +1,15 @@
 # React-Framify
 
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CodeNKoffee)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/h4temsoliman)
+[![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/h4temsoliman)
+[![Website Badge](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://hatemsoliman.dev)
+
 React-Framify is a lightweight and versatile React component library that provides device framesets for showcasing screenshots and images. Whether you're looking to spice up your app presentations or just want to give your project visuals that extra edge, React-Framify has got you covered!
 
 ## Exciting News! 🎉
 
-As of version 1.3.0, React-Framify is smoother, faster, and more reliable than ever before! We've ironed out the kinks, ensuring that your experience is seamless and your projects shine. But that's not all - we're committed to making React-Framify even better. Expect new features, framesets, and a whole lot of customization options coming your way. Plus, we're revamping our landing page to make getting started with React-Framify a breeze. Stay tuned!
+As of version **1.3.0**, React-Framify is smoother, faster, and more reliable than ever before! We've ironed out the kinks, ensuring that your experience is seamless and your projects shine. But that's not all - we're committed to making React-Framify even better. Expect new features, framesets, and a whole lot of customization options coming your way. Plus, we're revamping our landing page to make getting started with React-Framify a breeze. Stay tuned!
 
 **Note**: Versions prior to 1.3.0 may have potential issues and could affect your project's performance. We highly recommend upgrading to enjoy all the improvements and new features!
 
@@ -83,4 +88,4 @@ React-Framify is proudly licensed under the GNU General Public License v3.0. Che
 
 ---
 
-Join us on this exciting journey to make React-Framify the go-to library for all your app presentation needs. Your feedback and contributions are what make this project thrive. Let's create something amazing together! 
+Join us on this exciting journey to make React-Framify the go-to library for all your app presentation needs. Your feedback and contributions are what make this project thrive. Let's create something amazing together!
