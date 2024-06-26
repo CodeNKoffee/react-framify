@@ -3,6 +3,7 @@ import '../styles/styles.css';
 interface PhoneFrameProps {
     screenshotList: string[];
     color?: string;
+    buttonColor?: string;
 }
-export default function PhoneFrame({ screenshotList, color }: PhoneFrameProps): React.JSX.Element;
+export default function PhoneFrame({ screenshotList, color, buttonColor }: PhoneFrameProps): React.JSX.Element;
 export {};

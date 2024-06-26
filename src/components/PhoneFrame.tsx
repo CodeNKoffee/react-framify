@@ -8,9 +8,10 @@ import '../styles/styles.css';
 interface PhoneFrameProps {
   screenshotList: string[];
   color?: string;
+  buttonColor?: string;
 }
 
-export default function PhoneFrame({ screenshotList, color }: PhoneFrameProps) {
+export default function PhoneFrame({ screenshotList, color, buttonColor }: PhoneFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
@@ -94,8 +95,18 @@ export default function PhoneFrame({ screenshotList, color }: PhoneFrameProps) {
         className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
       />
       <div className="preview__scroll--btns">
-        <button className="preview__scroll--btn btn" onClick={showPreviousImage}>Previous</button>
-        <button className="preview__scroll--btn btn" onClick={showNextImage}>Next</button>
+        <button 
+          className={`preview__scroll--btn btn ${buttonColor ? `bg-[${buttonColor}]` : 'bg-[#004F98]'}`}
+          onClick={showPreviousImage}
+        >
+          Previous
+        </button>
+        <button 
+          className={`preview__scroll--btn btn ${buttonColor ? `bg-[${buttonColor}]` : 'bg-[#004F98]'}`}
+          onClick={showNextImage}
+        >
+          Next
+        </button>
       </div>
     </figure>
   );
