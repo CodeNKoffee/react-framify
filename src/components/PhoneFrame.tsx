@@ -95,13 +95,13 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
       />
       <div className="preview__scroll--btns">
         <button 
-          className={`preview__scroll--btn btn bg-[#004F98]`}
+          className={`preview__scroll--btn btn`}
           onClick={showPreviousImage}
         >
           Previous
         </button>
         <button 
-          className={`preview__scroll--btn btn bg-[#004F98]`}
+          className={`preview__scroll--btn btn`}
           onClick={showNextImage}
         >
           Next
