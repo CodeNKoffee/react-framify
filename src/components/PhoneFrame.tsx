@@ -71,7 +71,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
       onTouchEnd={handleTouchEnd}
     >
       {/* <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" /> */}
-      {/* <div className={`w-[250.38px] h-[507.5px] border-[3px] ${color ? `border-[${color}]` : "border-gray-600"} rounded-[2.4rem] z-10 relative`}>
+      <div className={`w-[250.38px] h-[507.5px] border-[3px] ${color ? `border-[${color}]` : "border-gray-600"} rounded-[2.4rem] z-10 relative`}>
         <div className="w-full h-full border-[9px] border-black p-2 rounded-[2.2rem]">
           <div className="bg-transparent rounded-lg flex justify-center items-start">
             <div className="w-1/3 h-4/12 bg-black rounded-full p-[0.4rem]">
@@ -79,8 +79,8 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             </div>
           </div>
         </div>
-      </div> */}
-      <div className="div1">
+      </div>
+      {/* <div className="div1">
         <div className="div2">
           <div className="div3">
             <div className="div4">
@@ -88,7 +88,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <img
         src={screenshotList[currentImageIndex]}
         className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
