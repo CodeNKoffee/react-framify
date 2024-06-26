@@ -7,9 +7,10 @@ import '../styles/styles.css';
 
 interface PhoneFrameProps {
   screenshotList: string[];
+  color?: string;
 }
 
-export default function PhoneFrame({ screenshotList }: PhoneFrameProps) {
+export default function PhoneFrame({ screenshotList, color }: PhoneFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
@@ -79,11 +80,7 @@ export default function PhoneFrame({ screenshotList }: PhoneFrameProps) {
         </div>
       </div> */}
       {/* <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" /> */}
-      <div className="w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative">
-              <img
-                src={screenshotList[currentImageIndex]}
-                className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
-              />
+      <div className={`w-[250.38px] h-[507.5px] border-[3px] ${color ? `border-[${color}]` : "border-gray-600"} rounded-[2.4rem] z-10 relative`}>
         <div className="w-full h-full border-[9px] border-black p-2 rounded-[2.2rem]">
           <div className="bg-transparent rounded-lg flex justify-center items-start">
             <div className="w-1/3 h-4/12 bg-black rounded-full p-[0.4rem]">
@@ -92,6 +89,10 @@ export default function PhoneFrame({ screenshotList }: PhoneFrameProps) {
           </div>
         </div>
       </div>
+      <img
+        src={screenshotList[currentImageIndex]}
+        className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
+      />
       <div className="preview__scroll--btns">
         <button className="preview__scroll--btn btn" onClick={showPreviousImage}>Previous</button>
         <button className="preview__scroll--btn btn" onClick={showNextImage}>Next</button>
