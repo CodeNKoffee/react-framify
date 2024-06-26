@@ -52,7 +52,7 @@
 .preview__scroll--btn {
   border-radius: 16px;
   border: none;
-  /* background-color: #004F98; */
+  background-color: #004F98;
   color: #FFF;
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -75,4 +75,50 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+}
+
+/* 
+
+TEMP STLYING
+
+*/
+.div1 {
+  width: 250.38px;
+  height: 507.5px;
+  border: 3px solid #4B5563; /* Dynamic color or fallback to gray-600 */
+  border-radius: 2.4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.div2 {
+  width: 100%;
+  height: 100%;
+  border: 9px solid black;
+  padding: 2px;
+  border-radius: 2.2rem;
+}
+
+.div3 {
+  background-color: transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.div4 {
+  width: 33.333%;
+  height: 50%;
+  background-color: black;
+  border-radius: 9999px; /* Tailwind's rounded-full */
+  padding: 0.4rem;
+}
+
+.div5 {
+  float: right;
+  width: 20%;
+  border-radius: 9999px; /* Tailwind's rounded-full */
+  background-color: #1F2937; /* Tailwind's gray-900 */
+  padding: 0.25rem;
 }
