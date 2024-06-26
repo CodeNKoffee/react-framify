@@ -68,8 +68,8 @@ export default function PhoneFrame({ screenshotList }: PhoneFrameProps) {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <IPhoneFourteenPro />
-      {/* <div className="w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative">
+      {/* <IPhoneFourteenPro /> */}
+      <div className="w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative">
         <div className="w-full h-full border-[9px] border-black p-2 rounded-[2.2rem]">
           <div className="bg-transparent rounded-lg flex justify-center items-start">
             <div className="w-1/3 h-4/12 bg-black rounded-full p-[0.4rem]">
@@ -77,7 +77,7 @@ export default function PhoneFrame({ screenshotList }: PhoneFrameProps) {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" /> */}
       <img
         src={screenshotList[currentImageIndex]}
