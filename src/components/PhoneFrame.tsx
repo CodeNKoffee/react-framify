@@ -128,7 +128,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             height: '100%',
             border: '9px solid #000000',
             borderRadius: '2.2rem',
-            zIndex: 20,
+            zIndex: 100,
           }}
         >
           <img
@@ -137,9 +137,9 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             style={{
               position: 'relative',
               borderRadius: '1.5rem',
-              height: '101%',
+              height: '100%',
               width: '101%',
-              zIndex: 0,
+              zIndex: -1,
             }}
           />
           <div
