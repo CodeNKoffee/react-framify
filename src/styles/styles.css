@@ -25,7 +25,7 @@
   cursor: grab;
 }
 
-.phone__frameset--img {
+/* .phone__frameset--img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +33,11 @@
   width: 92%;
   height: 97%;
   transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 1.5s ease;
+} */
+
+.phone__frameset--img {
   opacity: 1;
   transition: opacity 1.5s ease;
 }

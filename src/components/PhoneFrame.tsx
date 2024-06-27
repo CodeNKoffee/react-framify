@@ -71,7 +71,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
       onTouchEnd={handleTouchEnd}
     >
       {/* <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" /> */}
-      <div className={`w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative`}>
+      {/* <div className={`w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative`}>
         <div className="w-full h-full border-[9px] border-black p-2 rounded-[2.2rem]">
           <div className="bg-transparent rounded-lg flex justify-center items-start">
             <div className="w-1/3 h-4/12 bg-black rounded-full p-[0.4rem]">
@@ -79,21 +79,12 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             </div>
           </div>
         </div>
-      </div>
-      {/* <div className="div1">
-        <div className="div2">
-          <div className="div3">
-            <div className="div4">
-              <div className="div5"></div>
-            </div>
-          </div>
-        </div>
       </div> */}
-      <img
+      {/* <img
         src={screenshotList[currentImageIndex]}
         className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
-      />
-      <div className="preview__scroll--btns">
+      /> */}
+      {/* <div className="preview__scroll--btns">
         <button 
           className={`preview__scroll--btn btn`}
           onClick={showPreviousImage}
@@ -106,7 +97,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
         >
           Next
         </button>
-      </div>
+      </div> */}
       {/* <div className="preview__scroll--btns">
         <button 
           className={`preview__scroll--btn btn ${buttonColor ? `bg-[${buttonColor}]` : 'bg-[#004F98]'}`}
@@ -121,6 +112,31 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
           Next
         </button>
       </div> */}
+      <div className={`w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative`}>
+        <div className="w-full h-full border-[9px] border-black rounded-[2.2rem] z-20">
+          <img
+            src={screenshotList[currentImageIndex]}
+            className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''} relative rounded-[1.5rem] h-full w-full z-0`}
+          />
+          <div className="w-1/3 h-4/12 bg-black rounded-full p-[0.4rem] absolute top-4 left-1/2 -translate-x-1/2">
+            <div className="float-right w-1/5 rounded-full bg-gray-900 p-[0.25rem]"></div>
+          </div>
+        </div>
+      </div>
+      <div className="preview__scroll--btns">
+        <button 
+          className={`preview__scroll--btn btn`}
+          onClick={showPreviousImage}
+        >
+          Previous
+        </button>
+        <button 
+          className={`preview__scroll--btn btn`}
+          onClick={showNextImage}
+        >
+          Next
+        </button>
+      </div>
     </figure>
   );
 }
