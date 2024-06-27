@@ -137,15 +137,14 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             style={{
               position: 'relative',
               borderRadius: '1.5rem',
-              height: '100%',
-              width: '100%',
+              height: '101%',
+              width: '101%',
               zIndex: 0,
             }}
           />
           <div
             style={{
               width: '33.33%', // 1/3 of the width
-              height: '33.33%', // 4/12 of the height
               backgroundColor: '#000000',
               borderRadius: '9999px', // full rounded
               padding: '0.4rem',
