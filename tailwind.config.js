@@ -5,6 +5,11 @@ module.exports = {
     './public/index.html',
     './node_modules/react-framify/dist/**/*.js',
   ],
+  safelist: [
+    'fade-out',
+    'preview__scroll--btn',
+    // add other classes if used dynamically
+  ],
   theme: {
     extend: {},
   },
