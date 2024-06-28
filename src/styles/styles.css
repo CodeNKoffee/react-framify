@@ -57,9 +57,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+  z-index: 1000;
+  position: relative;
 }
 
 .preview__scroll--btn {
+  z-index: 1000; 
+  position: relative; 
   border-radius: 16px;
   border: none;
   background-color: #004F98;
