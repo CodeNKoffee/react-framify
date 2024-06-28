@@ -1,17 +1,16 @@
 "use client"
 
 import React, { useEffect, useState, TouchEvent } from 'react';
-// import PhoneFrameset from "../assets/iPhone14ProFrame.png";
 import '../styles/styles.css';
-// import IPhoneFourteenPro from './Framesets/IPhoneFourteenPro';
 
 interface PhoneFrameProps {
   screenshotList: string[];
-  color?: string;
+  phoneColor?: string;
   buttonColor?: string;
+  buttonTextColor?: string;
 }
 
-export default function PhoneFrame({ screenshotList, color, buttonColor }: PhoneFrameProps) {
+export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, buttonTextColor }: PhoneFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
@@ -70,65 +69,23 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* <img src={PhoneFrameset} alt="Image by svstudioart on Freepik" className="phone__frameset" /> */}
-      {/* <div className={`w-[250.38px] h-[507.5px] border-[3px] border-gray-600 rounded-[2.4rem] z-10 relative`}>
-        <div className="w-full h-full border-[9px] border-black p-2 rounded-[2.2rem]">
-          <div className="bg-transparent rounded-lg flex justify-center items-start">
-            <div className="w-1/3 h-4/12 bg-black rounded-full p-[0.4rem]">
-              <div className="float-right w-1/5 rounded-full bg-gray-900 p-[0.25rem]"></div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <img
-        src={screenshotList[currentImageIndex]}
-        className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
-      /> */}
-      {/* <div className="preview__scroll--btns">
-        <button 
-          className={`preview__scroll--btn btn`}
-          onClick={showPreviousImage}
-        >
-          Previous
-        </button>
-        <button 
-          className={`preview__scroll--btn btn`}
-          onClick={showNextImage}
-        >
-          Next
-        </button>
-      </div> */}
-      {/* <div className="preview__scroll--btns">
-        <button 
-          className={`preview__scroll--btn btn ${buttonColor ? `bg-[${buttonColor}]` : 'bg-[#004F98]'}`}
-          onClick={showPreviousImage}
-        >
-          Previous
-        </button>
-        <button 
-          className={`preview__scroll--btn btn ${buttonColor ? `bg-[${buttonColor}]` : 'bg-[#004F98]'}`}
-          onClick={showNextImage}
-        >
-          Next
-        </button>
-      </div> */}
       <div
         style={{
+          boxSizing: 'border-box',
+          position: 'relative',
+          border: `3px solid ${phoneColor ? phoneColor : '#4A5568'}`, 
+          borderRadius: '2.4rem',
           width: '250.38px',
           height: '507.5px',
-          border: '3px solid #4A5568', // Tailwind's gray-600 is #4A5568
-          borderRadius: '2.4rem',
           zIndex: 10,
-          position: 'relative',
-          boxSizing: 'border-box',
         }}
       >
         <div
           style={{
-            width: '100%',
-            height: '100%',
             border: '9px solid #000000',
             borderRadius: '2.2rem',
+            width: '100%',
+            height: '100%',
             zIndex: 100,
           }}
         >
@@ -145,22 +102,22 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
           />
           <div
             style={{
-              width: '33.33%', // 1/3 of the width
-              backgroundColor: '#000000',
-              borderRadius: '9999px', // full rounded
-              padding: '0.4rem',
               position: 'absolute',
-              top: '1rem', // Tailwind's top-4
+              top: '1rem', 
               left: '50%',
+              borderRadius: '9999px', 
+              backgroundColor: '#000',
+              width: '30.33%', 
+              padding: '0.4rem',
               transform: 'translateX(-50%)',
             }}
           >
             <div
               style={{
+                borderRadius: '9999px',
+                backgroundColor: '#1A202C', 
                 float: 'right',
-                width: '20%', // 1/5 of the width
-                borderRadius: '9999px', // full rounded
-                backgroundColor: '#1A202C', // Tailwind's gray-900
+                width: '20%', 
                 padding: '0.25rem',
               }}
             ></div>
@@ -170,6 +127,10 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
       <div className="preview__scroll--btns">
         <button
           className={`preview__scroll--btn btn`}
+          style={{
+            backgroundColor: buttonColor ? buttonColor : '#004F98',
+            color: buttonTextColor ? buttonTextColor : '#FFF',
+          }}
           onClick={showPreviousImage}
         >
           Previous

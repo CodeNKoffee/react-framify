@@ -13,7 +13,7 @@ As of version **1.3.38**, React-Framify is smoother, faster, and more reliable t
 
 ### Beta Release
 
-After receiving valuable feedback and conducting several iterations, we are pleased to announce that we have achieved a robust beta version in **1.3.37**. This release incorporates numerous improvements and enhancements based on user input, ensuring a more stable and refined product experience. Thank you for your continued support and contributions in helping us reach this milestone.
+After receiving valuable feedback and conducting several iterations, we are pleased to announce that we have achieved a robust beta version in **1.3.38**. This release incorporates numerous improvements and enhancements based on user input, ensuring a more stable and refined product experience. Thank you for your continued support and contributions in helping us reach this milestone.
 
 **Note**: _Versions prior to 1.3.38 may have potential issues and could affect your project's performance. We highly recommend upgrading to the latest version as you're reviewing this library now to enjoy all the improvements and new features!_
 
@@ -31,6 +31,12 @@ Get started with React-Framify in no time:
 
 ```bash
 npm install react-framify
+```
+
+or
+
+```bash
+npm install react-framify@latest
 ```
 
 ## Usage
