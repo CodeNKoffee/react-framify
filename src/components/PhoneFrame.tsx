@@ -137,6 +137,10 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
         </button>
         <button
           className={`preview__scroll--btn btn`}
+          style={{
+            backgroundColor: buttonColor ? buttonColor : '#004F98',
+            color: buttonTextColor ? buttonTextColor : '#FFF',
+          }}
           onClick={showNextImage}
         >
           Next
