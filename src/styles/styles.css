@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 .preview__phone--mockup {
   margin-top: 380px;
 }

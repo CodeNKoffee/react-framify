@@ -138,8 +138,8 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
             style={{
               position: 'relative',
               borderRadius: '1.5rem',
-              height: '100%',
               width: '100%',
+              objectFit: 'cover',
               zIndex: -1,
             }}
           />
