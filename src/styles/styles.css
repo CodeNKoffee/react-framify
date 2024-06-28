@@ -7,9 +7,9 @@
   overflow: hidden;
 }
 
-/* .preview__phone--mockup {
+.preview__phone--mockup {
   margin-top: 380px;
-} */
+}
 
 .phone__frameset--wrapper {
   position: relative;
@@ -81,10 +81,10 @@
   justify-content: center;
 }
 
-.preview__scroll--btn:hover {
+/* .preview__scroll--btn:hover {
   color: #FFF;
   transform: scale(1.08);
-}
+} */
 
 .preview__scroll {
   position: absolute;
