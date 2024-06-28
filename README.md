@@ -9,9 +9,13 @@ React-Framify is a lightweight and versatile React component library that provid
 
 ## Exciting News! 🎉
 
-As of version **1.3.0**, React-Framify is smoother, faster, and more reliable than ever before! We've ironed out the kinks, ensuring that your experience is seamless and your projects shine. But that's not all - we're committed to making React-Framify even better. Expect new features, framesets, and a whole lot of customization options coming your way. Plus, we're revamping our landing page to make getting started with React-Framify a breeze. Stay tuned!
+As of version **1.3.37**, React-Framify is smoother, faster, and more reliable than ever before! We've ironed out the kinks, ensuring that your experience is seamless and your projects shine. But that's not all - we're committed to making React-Framify even better. Expect new features, framesets, and a whole lot of customization options coming your way. Plus, we're revamping our landing page to make getting started with React-Framify a breeze. Stay tuned!
 
-**Note**: _Versions prior to 1.3.0 AND version 1.3.1 may have potential issues and could affect your project's performance. We highly recommend upgrading to the latest version as you're reviewing this library now to enjoy all the improvements and new features!_
+### Beta Release
+
+After receiving valuable feedback and conducting several iterations, we are pleased to announce that we have achieved a robust beta version in **1.3.37**. This release incorporates numerous improvements and enhancements based on user input, ensuring a more stable and refined product experience. Thank you for your continued support and contributions in helping us reach this milestone.
+
+**Note**: _Versions prior to 1.3.37 may have potential issues and could affect your project's performance. We highly recommend upgrading to the latest version as you're reviewing this library now to enjoy all the improvements and new features!_
 
 ## Features
 
