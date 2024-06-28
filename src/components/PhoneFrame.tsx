@@ -120,6 +120,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
           borderRadius: '2.4rem',
           zIndex: 10,
           position: 'relative',
+          boxSizing: 'border-box',
         }}
       >
         <div
@@ -138,7 +139,7 @@ export default function PhoneFrame({ screenshotList, color, buttonColor }: Phone
               position: 'relative',
               borderRadius: '1.5rem',
               height: '100%',
-              width: '101%',
+              width: '100%',
               zIndex: -1,
             }}
           />
