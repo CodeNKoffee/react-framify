@@ -7,9 +7,9 @@
   overflow: hidden;
 }
 
-.preview__phone--mockup {
+/* .preview__phone--mockup {
   margin-top: 380px;
-}
+} */
 
 .phone__frameset--wrapper {
   position: relative;
@@ -55,6 +55,7 @@
 }
 
 .preview__scroll--btns {
+  width: 100%;
   margin-top: 24px;
   display: flex;
   justify-content: space-between;
@@ -74,7 +75,7 @@
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
-  padding: 8px 16px;
+  padding: 8px 16px;;
   display: flex;
   flex: 1;
   justify-content: center;
