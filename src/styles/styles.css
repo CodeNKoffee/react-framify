@@ -81,10 +81,11 @@
   justify-content: center;
 }
 
-/* .preview__scroll--btn:hover {
-  color: #FFF;
-  transform: scale(1.08);
-} */
+.preview__scroll--btn:hover {
+  /* color: #FFF;
+  transform: scale(1.08); */
+  cursor: pointer;
+}
 
 .preview__scroll {
   position: absolute;
