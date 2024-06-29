@@ -92,6 +92,43 @@ export default function MyApp() {
 }
 ```
 
+### Props
+
+The PhoneFrame component accepts the following props:
+
+```typescript
+interface PhoneFrameProps {
+  screenshotList: string[]; // List of image URLs to be displayed in the phone frame
+  phoneColor?: string;      // Color of the phone frame
+  buttonColor?: string;     // Background color of the navigation buttons
+  buttonTextColor?: string; // Text color of the navigation buttons
+}
+```
+#### Example
+
+Here’s an example of how to pass these optional props:
+
+```jsx
+import PhoneFrame from 'react-framify';
+
+export default function MyApp() {
+  const screenshotList = [
+    'screenshot1.png',
+    'screenshot2.png',
+    'screenshot3.png',
+  ];
+
+  return (
+    <PhoneFrame 
+      screenshotList={screenshotList}
+      phoneColor="#000" // Optional: Color of the phone frame
+      buttonColor="#FFF" // Optional: Background color of the navigation buttons
+      buttonTextColor="#000" // Optional: Text color of the navigation buttons
+    />
+  );
+}
+```
+
 ## License
 
 React-Framify is proudly licensed under the GNU General Public License v3.0. Check out the LICENSE file for more details.
