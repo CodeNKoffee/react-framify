@@ -104,6 +104,7 @@ interface PhoneFrameProps {
   buttonTextColor?: string; // Text color of the navigation buttons
 }
 ```
+
 #### Example
 
 Here’s an example of how to pass these optional props:
