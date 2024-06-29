@@ -42,6 +42,8 @@
 } */
 
 .phone__frameset--img {
+  min-height: 100%;
+  object-fit: cover;
   opacity: 1;
   transition: opacity 1.5s ease;
 }
