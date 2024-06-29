@@ -96,7 +96,7 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
               position: 'relative',
               borderRadius: '1.5rem',
               width: '100%',
-              objectFit: 'fill',
+              objectFit: 'contain',
               zIndex: -1,
             }}
           />
