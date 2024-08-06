@@ -7,6 +7,12 @@
 
 React-Framify is a lightweight and versatile React component library that provides device framesets for showcasing screenshots and images. Whether you're looking to spice up your app presentations or just want to give your project visuals that extra edge, React-Framify has got you covered!
 
+### Preview
+
+[Click HERE to Watch a Preview!](https://youtu.be/sOgKJdNeMuM?si=90OQjd0lp9-0LaiD)
+
+---
+
 ## Exciting News! 🎉
 
 As of version **1.3.38**, React-Framify is smoother, faster, and more reliable than ever before! We've ironed out the kinks, ensuring that your experience is seamless and your projects shine. But that's not all - we're committed to making React-Framify even better. Expect new features, framesets, and a whole lot of customization options coming your way. Plus, we're revamping our landing page to make getting started with React-Framify a breeze. Stay tuned!
@@ -40,6 +46,10 @@ npm install react-framify@latest
 ```
 
 ## Usage
+
+### How to Use
+
+[How to Use React-Framify?](https://youtu.be/8VcSHI2qlkQ)
 
 Dive right in with this simple example of how to use the PhoneFrame component in your React application:
 
