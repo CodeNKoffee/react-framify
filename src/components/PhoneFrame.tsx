@@ -62,6 +62,8 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
     }, 300);
   };
 
+  const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
   return (
     <figure
       className="phone__frameset--wrapper preview__phone--mockup"
@@ -99,27 +101,52 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
               zIndex: -1,
             }}
           />
+          {/* Current time of the user opening the site */}
           <div
             style={{
               position: 'absolute',
               top: '1rem', 
-              left: '50%',
-              borderRadius: '9999px', 
-              backgroundColor: '#000',
-              width: '30.33%', 
-              padding: '0.4rem',
-              transform: 'translateX(-50%)',
+              left: '1rem',
+              color: '#fff',
+              fontSize: '14px',
             }}
           >
-            <div
-              style={{
-                borderRadius: '9999px',
-                backgroundColor: '#1A202C', 
-                float: 'right',
-                width: '20%', 
-                padding: '0.25rem',
-              }}
-            ></div>
+            {currentTime}
+          </div>
+          {/* IOS wifi and signal indicators */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              color: '#fff',
+            }}
+          >
+            {/* Signal Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="#fff"
+              width="16px"
+              height="16px"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M2 22h20V2z" />
+            </svg>
+            {/* Wi-Fi Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="#fff"
+              width="16px"
+              height="16px"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M12 21.5l-1.2-1.2c-4.8-4.7-7.8-7.6-7.8-11.1 0-3.1 2.5-5.7 5.7-5.7 1.8 0 3.4.9 4.3 2.2.9-1.3 2.5-2.2 4.3-2.2 3.1 0 5.7 2.6 5.7 5.7 0 3.5-3 6.4-7.8 11.1L12 21.5z" />
+            </svg>
           </div>
         </div>
       </div>
