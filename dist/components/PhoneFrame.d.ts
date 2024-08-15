@@ -5,6 +5,7 @@ interface PhoneFrameProps {
     phoneColor?: string;
     buttonColor?: string;
     buttonTextColor?: string;
+    statusBar: 'light' | 'dark';
 }
-export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, buttonTextColor }: PhoneFrameProps): React.JSX.Element;
+export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, buttonTextColor, statusBar, }: PhoneFrameProps): React.JSX.Element;
 export {};
