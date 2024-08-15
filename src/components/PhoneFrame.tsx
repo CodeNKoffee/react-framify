@@ -8,9 +8,16 @@ interface PhoneFrameProps {
   phoneColor?: string;
   buttonColor?: string;
   buttonTextColor?: string;
+  statusBar: 'light' | 'dark'; // Mandatory prop
 }
 
-export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, buttonTextColor }: PhoneFrameProps) {
+export default function PhoneFrame({
+  screenshotList,
+  phoneColor,
+  buttonColor,
+  buttonTextColor,
+  statusBar,
+}: PhoneFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
@@ -63,6 +70,7 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
   };
 
   const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const indicatorColor = statusBar === 'light' ? '#FFF' : '#000';
 
   return (
     <figure
@@ -108,7 +116,7 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
               position: 'absolute',
               top: '1rem', 
               left: '1rem',
-              color: '#fff',
+              color: indicatorColor,
               fontSize: '14px',
             }}
           >
@@ -123,14 +131,14 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
               display: 'flex',
               alignItems: 'center',
               gap: '4px',
-              color: '#fff',
+              color: indicatorColor,
             }}
           >
             {/* Signal Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#fff"
+              fill={indicatorColor}
               width="16px"
               height="16px"
             >
@@ -141,7 +149,7 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="#fff"
+              fill={indicatorColor}
               width="16px"
               height="16px"
             >
