@@ -74,7 +74,7 @@ export default function PhoneFrame({
     minute: '2-digit',
     hour12: false 
   });
-  
+
   const indicatorColor = statusBar === 'light' ? '#FFF' : '#000';
 
   return (
@@ -119,8 +119,8 @@ export default function PhoneFrame({
           <div
             style={{
               position: 'absolute',
-              top: '1rem', 
-              left: '1rem',
+              top: '1.2rem', 
+              left: '2rem',
               color: indicatorColor,
               fontSize: '10px',
             }}
@@ -131,8 +131,8 @@ export default function PhoneFrame({
           <div
             style={{
               position: 'absolute',
-              top: '1rem',
-              right: '1rem',
+              top: '1.2rem',
+              right: '2rem',
               display: 'flex',
               alignItems: 'center',
               gap: '4px',
