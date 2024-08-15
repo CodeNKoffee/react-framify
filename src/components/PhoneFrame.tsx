@@ -98,6 +98,7 @@ export default function PhoneFrame({ screenshotList, phoneColor, buttonColor, bu
               position: 'relative',
               borderRadius: '1.5rem',
               width: '100%',
+              height: '102%',
               zIndex: -1,
             }}
           />
