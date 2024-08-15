@@ -69,7 +69,12 @@ export default function PhoneFrame({
     }, 300);
   };
 
-  const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const currentTime = new Date().toLocaleTimeString([], { 
+    hour: '2-digit', 
+    minute: '2-digit',
+    hour12: false 
+  });
+  
   const indicatorColor = statusBar === 'light' ? '#FFF' : '#000';
 
   return (
@@ -117,7 +122,7 @@ export default function PhoneFrame({
               top: '1rem', 
               left: '1rem',
               color: indicatorColor,
-              fontSize: '14px',
+              fontSize: '10px',
             }}
           >
             {currentTime}
@@ -139,8 +144,8 @@ export default function PhoneFrame({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill={indicatorColor}
-              width="16px"
-              height="16px"
+              width="12px"
+              height="12px"
             >
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M2 22h20V2z" />
@@ -150,8 +155,8 @@ export default function PhoneFrame({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill={indicatorColor}
-              width="16px"
-              height="16px"
+              width="12px"
+              height="12px"
             >
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M12 21.5l-1.2-1.2c-4.8-4.7-7.8-7.6-7.8-11.1 0-3.1 2.5-5.7 5.7-5.7 1.8 0 3.4.9 4.3 2.2.9-1.3 2.5-2.2 4.3-2.2 3.1 0 5.7 2.6 5.7 5.7 0 3.5-3 6.4-7.8 11.1L12 21.5z" />
