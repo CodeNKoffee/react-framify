@@ -123,11 +123,35 @@ export default function PhoneFrame({
               left: '2rem',
               color: indicatorColor,
               fontSize: '10px',
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
             }}
           >
             {currentTime}
           </div>
-          {/* IOS wifi and signal indicators */}
+          {/* Dynamic Island */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '1rem', 
+              left: '50%',
+              borderRadius: '9999px', 
+              backgroundColor: '#000',
+              width: '30.33%', 
+              padding: '0.4rem',
+              transform: 'translateX(-50%)',
+            }}
+          >
+            <div
+              style={{
+                borderRadius: '9999px',
+                backgroundColor: '#1A202C', 
+                float: 'right',
+                width: '20%', 
+                padding: '0.25rem',
+              }}
+            ></div>
+          </div>
+          {/* iOS Wi-Fi and Signal Indicators */}
           <div
             style={{
               position: 'absolute',
@@ -148,7 +172,7 @@ export default function PhoneFrame({
               height="12px"
             >
               <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M2 22h20V2z" />
+              <path d="M6 16.5h2v2h-2zM10 12.5h2v6h-2zM14 9.5h2v9h-2zM18 5.5h2v13h-2z" />
             </svg>
             {/* Wi-Fi Icon */}
             <svg
@@ -159,7 +183,7 @@ export default function PhoneFrame({
               height="12px"
             >
               <path d="M0 0h24v24H0V0z" fill="none" />
-              <path d="M12 21.5l-1.2-1.2c-4.8-4.7-7.8-7.6-7.8-11.1 0-3.1 2.5-5.7 5.7-5.7 1.8 0 3.4.9 4.3 2.2.9-1.3 2.5-2.2 4.3-2.2 3.1 0 5.7 2.6 5.7 5.7 0 3.5-3 6.4-7.8 11.1L12 21.5z" />
+              <path d="M12 18.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm3-2.5l-3-3-3 3c-1.9-1.8-4.4-2.9-7.1-3.4l1.4-1.4C6.9 12 9.2 13 12 13s5.1-1 7.1-2.4l1.4 1.4c-2.7.6-5.2 1.6-7.1 3.4z" />
             </svg>
           </div>
         </div>
