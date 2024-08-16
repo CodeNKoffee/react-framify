@@ -180,7 +180,7 @@ export default function PhoneFrame({
               viewBox="0 0 24 24"
               fill="none"
               stroke={indicatorColor}
-              strokeWidth="2"
+              // strokeWidth="2"
               width="12px"
               height="12px"
             >
@@ -190,7 +190,7 @@ export default function PhoneFrame({
               {/* Middle Arc */}
               <path d="M5 14C8.5 10.5 15.5 10.5 19 14" />
               {/* Smallest Arc */}
-              <path d="M8.5 17.5c1.5-1.5 5.5-1.5 7 0" />
+              {/* <path d="M8.5 17.5c1.5-1.5 5.5-1.5 7 0" /> */}
               {/* Dot */}
               <circle cx="12" cy="21" r="1" fill={indicatorColor} />
             </svg>
