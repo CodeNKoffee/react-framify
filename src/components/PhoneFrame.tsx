@@ -156,7 +156,7 @@ export default function PhoneFrame({
             style={{
               position: 'absolute',
               top: '1.2rem',
-              right: '1.2rem',
+              right: '1.6rem',
               display: 'flex',
               alignItems: 'center',
               gap: '4px',
@@ -194,8 +194,8 @@ export default function PhoneFrame({
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 12"
-              width="12.5"
-              height="6"
+              width="16.6"
+              height="8"
               fill="none"
               stroke={indicatorColor}
               strokeWidth="1"
