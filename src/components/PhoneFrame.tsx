@@ -159,7 +159,7 @@ export default function PhoneFrame({
               right: '1.6rem',
               display: 'flex',
               alignItems: 'center',
-              gap: '4px',
+              gap: '5px',
               color: indicatorColor,
             }}
           >
@@ -185,11 +185,11 @@ export default function PhoneFrame({
               height="12px"
             >
               {/* Largest Arc */}
-              <path d="M3 12C7 7 17 7 21 12" />
+              <path d="M3 9C7 4 17 4 21 9" />
               {/* Middle Arc */}
-              <path d="M6 16C9 12.5 15 12.5 18 16" />
+              <path d="M6 13C9 9.5 15 9.5 18 13" />
               {/* Dot */}
-              <circle cx="12" cy="20" r="1" fill={indicatorColor} />
+              <circle cx="12" cy="17" r="1" fill={indicatorColor} />
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
