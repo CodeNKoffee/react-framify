@@ -158,7 +158,7 @@ export default function PhoneFrame({
               top: '1.2rem',
               right: '2rem',
               display: 'flex',
-              alignItems: 'center',
+              alignItems: 'start',
               gap: '4px',
               color: indicatorColor,
             }}
