@@ -183,12 +183,14 @@ export default function PhoneFrame({
               height="12px"
             >
               <path d="M0 0h24v24H0z" fill="none" />
-              {/* First (Largest) Arc */}
-              <path d="M12 18c.4 0 .7-.2 1-.4.3-.2.5-.6.5-1 0-.8-.7-1.5-1.5-1.5-.4 0-.7.2-1 .4-.3.2-.5.6-.5 1 0 .8.7 1.5 1.5 1.5z" />
-              {/* Second Arc */}
-              <path d="M12 15c1.7 0 3.3-.6 4.6-1.7l1.4 1.4c-1.6 1.4-3.7 2.3-6 2.3s-4.4-.9-6-2.3l1.4-1.4c1.3 1.1 2.9 1.7 4.6 1.7z" />
-              {/* Third (Smallest) Arc */}
-              <path d="M12 12c2.4 0 4.8-.9 6.6-2.6l1.4 1.4c-2.3 2.1-5.2 3.2-8 3.2s-5.7-1.1-8-3.2l1.4-1.4c1.8 1.7 4.2 2.6 6.6 2.6z" />
+              {/* Largest Arc */}
+              <path d="M1 9.5c5-5 13-5 18 0" />
+              {/* Middle Arc */}
+              <path d="M4.5 13c3.5-3.5 9.5-3.5 13 0" />
+              {/* Smallest Arc */}
+              <path d="M8 16.5c2-2 4-2 6 0" />
+              {/* Dot */}
+              <circle cx="11" cy="19" r="1" />
             </svg>
           </div>
         </div>
