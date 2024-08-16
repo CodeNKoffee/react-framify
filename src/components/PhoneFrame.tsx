@@ -168,26 +168,26 @@ export default function PhoneFrame({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill={indicatorColor}
+              strokeWidth="3"
               width="14px"
               height="14px"
             >
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M6 16.5h2v2h-2zM10 12.5h2v6h-2zM14 9.5h2v9h-2zM18 5.5h2v13h-2z" />
             </svg>
-            {/* Wi-Fi Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
               stroke={indicatorColor}
-              strokeWidth="2"
+              strokeWidth="3"
               width="12px"
               height="12px"
             >
               {/* Largest Arc */}
-              <path d="M1.5 12C6.5 7 17.5 7 22.5 12" />
+              <path d="M3 12C7 7 17 7 21 12" />
               {/* Middle Arc */}
-              <path d="M5 16C8.5 12.5 15.5 12.5 19 16" />
+              <path d="M6 16C9 12.5 15 12.5 18 16" />
               {/* Dot */}
               <circle cx="12" cy="20" r="1" fill={indicatorColor} />
             </svg>
