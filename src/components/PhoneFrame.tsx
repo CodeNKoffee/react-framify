@@ -181,8 +181,8 @@ export default function PhoneFrame({
               fill="none"
               stroke={indicatorColor}
               strokeWidth="2"
-              width="14px"
-              height="14px"
+              width="12px"
+              height="12px"
             >
               {/* Largest Arc */}
               <path d="M1.5 12C6.5 7 17.5 7 22.5 12" />
