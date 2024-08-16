@@ -168,8 +168,8 @@ export default function PhoneFrame({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill={indicatorColor}
-              width="12px"
-              height="12px"
+              width="14px"
+              height="14px"
             >
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M6 16.5h2v2h-2zM10 12.5h2v6h-2zM14 9.5h2v9h-2zM18 5.5h2v13h-2z" />
@@ -181,18 +181,15 @@ export default function PhoneFrame({
               fill="none"
               stroke={indicatorColor}
               strokeWidth="2"
-              width="12px"
-              height="12px"
+              width="14px"
+              height="14px"
             >
-              {/* <path d="M0 0h24v24H0z" fill="none" /> */}
               {/* Largest Arc */}
-              <path d="M1.5 10.5C6.5 5.5 17.5 5.5 22.5 10.5" />
+              <path d="M1.5 12C6.5 7 17.5 7 22.5 12" />
               {/* Middle Arc */}
-              <path d="M5 14C8.5 10.5 15.5 10.5 19 14" />
-              {/* Smallest Arc */}
-              {/* <path d="M8.5 17.5c1.5-1.5 5.5-1.5 7 0" /> */}
+              <path d="M5 16C8.5 12.5 15.5 12.5 19 16" />
               {/* Dot */}
-              <circle cx="12" cy="21" r="1" fill={indicatorColor} />
+              <circle cx="12" cy="20" r="1" fill={indicatorColor} />
             </svg>
           </div>
         </div>
