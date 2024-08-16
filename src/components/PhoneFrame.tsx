@@ -180,11 +180,11 @@ export default function PhoneFrame({
               viewBox="0 0 24 24"
               fill="none"
               stroke={indicatorColor}
-              // strokeWidth="2"
+              strokeWidth="2"
               width="12px"
               height="12px"
             >
-              <path d="M0 0h24v24H0z" fill="none" />
+              {/* <path d="M0 0h24v24H0z" fill="none" /> */}
               {/* Largest Arc */}
               <path d="M1.5 10.5C6.5 5.5 17.5 5.5 22.5 10.5" />
               {/* Middle Arc */}
