@@ -119,7 +119,7 @@ export default function PhoneFrame({
           <div
             style={{
               position: 'absolute',
-              top: '1.2rem', 
+              top: '1.1rem', 
               left: '2rem',
               color: indicatorColor,
               fontSize: '10px',
@@ -178,19 +178,21 @@ export default function PhoneFrame({
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill={indicatorColor}
+              fill="none"
+              stroke={indicatorColor}
+              strokeWidth="2"
               width="12px"
               height="12px"
             >
               <path d="M0 0h24v24H0z" fill="none" />
               {/* Largest Arc */}
-              <path d="M1 9.5c5-5 13-5 18 0" />
+              <path d="M1.5 10.5C6.5 5.5 17.5 5.5 22.5 10.5" />
               {/* Middle Arc */}
-              <path d="M4.5 13c3.5-3.5 9.5-3.5 13 0" />
+              <path d="M5 14C8.5 10.5 15.5 10.5 19 14" />
               {/* Smallest Arc */}
-              <path d="M8 16.5c2-2 4-2 6 0" />
+              <path d="M8.5 17.5c1.5-1.5 5.5-1.5 7 0" />
               {/* Dot */}
-              <circle cx="11" cy="19" r="1" />
+              <circle cx="12" cy="21" r="1" fill={indicatorColor} />
             </svg>
           </div>
         </div>
