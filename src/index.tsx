@@ -1,5 +1,5 @@
 "use client"
 
-import PhoneFrame from "./components/PhoneFrame";
+import iPhoneFrame from "./components/iPhoneFrame";
 
-export default PhoneFrame;
+export default iPhoneFrame;

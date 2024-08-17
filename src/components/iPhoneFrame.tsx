@@ -2,22 +2,15 @@
 
 import React, { useEffect, useState, TouchEvent } from 'react';
 import '../styles/styles.css';
+import { DeviceFrameProps } from '../types';
 
-interface PhoneFrameProps {
-  screenshotList: string[];
-  phoneColor?: string;
-  buttonColor?: string;
-  buttonTextColor?: string;
-  statusBar: 'light' | 'dark'; // Mandatory prop
-}
-
-export default function PhoneFrame({
+export default function iPhoneFrame({
   screenshotList,
   phoneColor,
   buttonColor,
   buttonTextColor,
   statusBar,
-}: PhoneFrameProps) {
+}: DeviceFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
