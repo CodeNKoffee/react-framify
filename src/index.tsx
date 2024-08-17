@@ -1,5 +1,7 @@
 "use client"
 
 import iPhoneFrame from "./components/iPhoneFrame";
+import AndroidFrame from "./components/AndroidFrame";
+import iPadFrame from "./components/iPadFrame";
 
-export default iPhoneFrame;
+export default { iPhoneFrame, AndroidFrame, iPadFrame };

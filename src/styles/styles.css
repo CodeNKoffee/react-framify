@@ -6,7 +6,7 @@
   margin-top: 380px;
 }
 
-/* Phone frameset & Buttons wrapper */
+/* Phone Frameset Styling */
 .phone__frameset--wrapper {
   position: relative;
   top: 50%;
@@ -28,18 +28,6 @@
 .phone__frameset:hover {
   cursor: grab;
 }
-
-/* .phone__frameset--img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 32px;
-  width: 92%;
-  height: 97%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: opacity 1.5s ease;
-} */
 
 .phone__frameset--img {
   height: 100%;
@@ -90,4 +78,44 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+}
+
+/* New iPad styles */
+.preview__ipad--mockup {
+  margin-top: 200px; /* Adjusted for larger iPad size */
+}
+
+.ipad__frameset--wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 512px; /* Doubled size for iPad */
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ipad__frameset {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.ipad__frameset:hover {
+  cursor: grab;
+}
+
+.ipad__frameset--img {
+  height: 100%;
+  min-height: 682.67px; /* Adjusted for 4:3 aspect ratio */
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+/* Image scrolling animation */
+.ipad__frameset--img.fade-out {
+  opacity: 0;
 }
