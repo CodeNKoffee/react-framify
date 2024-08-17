@@ -118,7 +118,7 @@ export default function IPhoneFrame({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              borderRadius: '1.5rem',
+              borderRadius: '2.2rem',
               zIndex: -1,
             }}
           />

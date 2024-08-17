@@ -117,7 +117,7 @@ export default function IPadFrame({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              borderRadius: '0.5rem',
+              borderRadius: '1.3rem',
               zIndex: -1,
             }}
           />

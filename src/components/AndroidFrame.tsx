@@ -118,7 +118,7 @@ export default function AndroidFrame({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              borderRadius: '1.8rem',
+              borderRadius: '2.8rem',
               zIndex: -1,
             }}
           />
