@@ -102,7 +102,7 @@ export default function AndroidFrame({
             className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
             style={{
               position: 'relative',
-              borderRadius: '1.5rem',
+              borderRadius: '1.8rem',
               width: '100%',
               height: '102%',
               zIndex: -1,
