@@ -124,12 +124,14 @@ export default function AndroidFrame({
           {/* Camera Hole Punch */}
           <div style={{
             position: 'absolute',
-            top: '0.5rem',
-            right: '1rem',
-            width: '10px',
-            height: '10px',
-            borderRadius: '50%',
-            backgroundColor: '#000',
+              top: '1rem', 
+              left: '50%',
+              borderRadius: '9999px', 
+              backgroundColor: '#000',
+              width: '10px', 
+              height: '10px', 
+              padding: '0.4rem',
+              transform: 'translateX(-50%)',
           }}></div>
           {/* iOS Wi-Fi and Signal Indicators */}
           <div
