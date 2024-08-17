@@ -1,6 +1,6 @@
 {
   "name": "react-framify",
-  "version": "1.3.73",
+  "version": "1.3.74",
   "description": "A React component library for device framesets",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
