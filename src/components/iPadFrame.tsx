@@ -101,7 +101,7 @@ export default function IPadFrame({
             className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
             style={{
               position: 'relative',
-              borderRadius: '1.5rem',
+              borderRadius: '0.5rem',
               width: '100%',
               height: '102%',
               zIndex: -1,
