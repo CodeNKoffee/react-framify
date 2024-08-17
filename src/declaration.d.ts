@@ -1,11 +1,11 @@
-declare module 'iPhoneFrame' {
-  const iPhoneFrame: React.ComponentType<any>;
-  export default iPhoneFrame;
+declare module 'IPhoneFrame' {
+  const IPhoneFrame: React.ComponentType<any>;
+  export default IPhoneFrame;
 }
 
-declare module 'iPadFrame' {
-  const iPadFrame: React.ComponentType<any>;
-  export default iPadFrame;
+declare module 'IPadFrame' {
+  const IPadFrame: React.ComponentType<any>;
+  export default IPadFrame;
 }
 
 declare module 'AndroidFrame' {

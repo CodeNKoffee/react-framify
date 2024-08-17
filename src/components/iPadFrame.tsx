@@ -4,7 +4,7 @@ import React, { useEffect, useState, TouchEvent } from 'react';
 import '../styles/styles.css';
 import { DeviceFrameProps } from '../types';
 
-export default function iPadFrame({
+export default function IPadFrame({
   screenshotList,
   phoneColor,
   buttonColor,
