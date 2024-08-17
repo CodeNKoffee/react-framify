@@ -138,7 +138,7 @@ export default function AndroidFrame({
           {/* Camera Hole Punch */}
           <div style={{
             position: 'absolute',
-              top: '1.0rem', 
+              top: '1.25rem', 
               left: '50%',
               borderRadius: '9999px', 
               backgroundColor: '#000',
