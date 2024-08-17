@@ -120,29 +120,6 @@ export default function IPadFrame({
           >
             {currentTime}
           </div>
-          {/* Dynamic Island */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '1rem', 
-              left: '50%',
-              borderRadius: '9999px', 
-              backgroundColor: '#000',
-              width: '30.33%', 
-              padding: '0.4rem',
-              transform: 'translateX(-50%)',
-            }}
-          >
-            <div
-              style={{
-                borderRadius: '9999px',
-                backgroundColor: '#1A202C', 
-                float: 'right',
-                width: '20%', 
-                padding: '0.25rem',
-              }}
-            ></div>
-          </div>
           {/* iOS Wi-Fi and Signal Indicators */}
           <div
             style={{
