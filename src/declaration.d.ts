@@ -1,6 +1,16 @@
-declare module 'PhoneFrame' {
-  const PhoneFrame: React.ComponentType<any>;
-  export default PhoneFrame;
+declare module 'iPhoneFrame' {
+  const iPhoneFrame: React.ComponentType<any>;
+  export default iPhoneFrame;
+}
+
+declare module 'iPadFrame' {
+  const iPadFrame: React.ComponentType<any>;
+  export default iPadFrame;
+}
+
+declare module 'AndroidFrame' {
+  const AndroidFrame: React.ComponentType<any>;
+  export default AndroidFrame;
 }
 
 declare module "*.png" {
