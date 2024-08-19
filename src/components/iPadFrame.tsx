@@ -98,7 +98,7 @@ export default function IPadFrame({
         <div
           style={{
             border: "9px solid #000000",
-            borderRadius: "2.8rem",
+            borderRadius: "1.3rem",
             width: "100%",
             height: "100%",
             zIndex: 100,

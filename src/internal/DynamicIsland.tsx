@@ -6,11 +6,11 @@ export default function DynamicIsland({ orientation }: { orientation: string }) 
       <div
         style={{
           position: 'absolute',
-          top: orientation === "portrait" ? '1rem' : '50%', 
+          top: orientation === "portrait" ? '0.5rem' : '50%', 
           left: orientation === "portrait" ? '50%' : '1rem',
           borderRadius: '9999px', 
           backgroundColor: '#000',
-          width: '30.33%', 
+          width: orientation === "portrait" ? '30.33%' : '18%', 
           padding: '0.4rem',
           transform: orientation === "portrait" ? 'translateX(-50%)' : 'translateY(-50%) rotate(-90deg)',
         }}
