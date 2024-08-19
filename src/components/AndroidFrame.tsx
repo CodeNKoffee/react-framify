@@ -92,8 +92,8 @@ export default function AndroidFrame({
           position: 'relative',
           border: `3px solid ${deviceColor ? deviceColor : '#4A5568'}`, 
           borderRadius: '3rem',
-          width: '250.38px',
-          height: '507.5px',
+          width: orientation === 'portrait' ? '250.38px' : '507.5px',
+          height: orientation === 'portrait' ? '507.5px' : '250.38px',
           zIndex: 10,
         }}
       >
