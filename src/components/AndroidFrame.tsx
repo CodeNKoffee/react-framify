@@ -2,13 +2,18 @@
 
 import React, { useEffect, useState, TouchEvent } from 'react';
 import '../styles/styles.css';
-import { DeviceFrameProps } from '../types';
+import { DeviceFrameProps } from "../types";
+import PunchHoleCamera from '../internal/PunchHoleCamera';
+import SignalIndicator from '../internal/SignalIndicator';
+import WiFiInficator from '../internal/WiFiIndicator';
+import BatteryIndicator from '../internal/BatteryIndicator';
+import Clock from '../internal/Clock';
 
 export default function AndroidFrame({
   screenshotList,
-  phoneColor,
-  buttonColor,
-  buttonTextColor,
+  deviceColor,
+  buttonStyles = {},
+  orientation = "portrait",
   statusBar,
 }: DeviceFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
@@ -62,13 +67,17 @@ export default function AndroidFrame({
     }, 300);
   };
 
-  const currentTime = new Date().toLocaleTimeString([], { 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: false 
-  });
-
-  const indicatorColor = statusBar === 'light' ? '#FFF' : '#000';
+  const indicatorColor = statusBar.mode === 'light' ? '#FFF' : '#000';
+  const {
+    buttonColor = '#004F98',
+    buttonTextColor = '#FFF',
+    border = 'none',
+    borderRadius = '16px',
+    fontSize = '16px',
+    fontFamily = 'Verdana, Geneva, Tahoma, sans-serif',
+    fontWeight = '700',
+    padding = '8px 16px',
+  } = buttonStyles;
 
   return (
     <figure
@@ -81,7 +90,7 @@ export default function AndroidFrame({
         style={{
           boxSizing: 'border-box',
           position: 'relative',
-          border: `3px solid ${phoneColor ? phoneColor : '#4A5568'}`, 
+          border: `3px solid ${deviceColor ? deviceColor : '#4A5568'}`, 
           borderRadius: '3rem',
           width: '250.38px',
           height: '507.5px',
@@ -97,17 +106,6 @@ export default function AndroidFrame({
             zIndex: 100,
           }}
         >
-          {/* <img
-            src={screenshotList[currentImageIndex]}
-            className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
-            style={{
-              position: 'relative',
-              borderRadius: '1.8rem',
-              width: '100%',
-              height: '102%',
-              zIndex: -1,
-            }}
-          /> */}
           <img
             src={screenshotList[currentImageIndex]}
             className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
@@ -123,97 +121,45 @@ export default function AndroidFrame({
             }}
           />
           {/* Current time of the user opening the site */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '1.1rem', 
-              left: '2rem',
-              color: indicatorColor,
-              fontSize: '10px',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
-            }}
-          >
-            {currentTime}
-          </div>
+          {orientation === "portrait" && <Clock indicatorColor={indicatorColor} />}
+
           {/* Camera Hole Punch */}
-          <div style={{
-            position: 'absolute',
-              top: '1.25rem', 
-              left: '50%',
-              borderRadius: '9999px', 
-              backgroundColor: '#000',
-              width: '10px', 
-              height: '10px', 
-              padding: '0.4rem',
-              transform: 'translateX(-50%)',
-          }}></div>
-          {/* iOS Wi-Fi and Signal Indicators */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '1.2rem',
-              right: '1.6rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '5px',
-              color: indicatorColor,
-            }}
-          >
-            {/* Signal Icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill={indicatorColor}
-              strokeWidth="3"
-              width="14px"
-              height="14px"
+          <PunchHoleCamera orientation={orientation} />
+
+          {orientation === "portrait" && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '1.2rem',
+                right: '1.6rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '5px',
+                color: indicatorColor,
+              }}
             >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M6 16.5h2v2h-2zM10 12.5h2v6h-2zM14 9.5h2v9h-2zM18 5.5h2v13h-2z" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke={indicatorColor}
-              strokeWidth="3"
-              width="12px"
-              height="12px"
-            >
-              {/* Largest Arc */}
-              <path d="M3 9C7 4 17 4 21 9" />
-              {/* Middle Arc */}
-              <path d="M6 13C9 9.5 15 9.5 18 13" />
-              {/* Dot */}
-              <circle cx="12" cy="17" r="1" fill={indicatorColor} />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 25 12"
-              width="16.6"
-              height="8"
-              fill="none"
-              stroke={indicatorColor}
-              strokeWidth="1"
-            >
-              {/* Main battery body */}
-              <rect x="0.5" y="0.5" width="21" height="11" rx="2" ry="2" />
-              
-              {/* Battery terminal */}
-              <path d="M23 4V8" strokeWidth="1.5" strokeLinecap="round" />
-              
-              {/* Battery level (adjust width to change level) */}
-              <rect x="2" y="2" width="18" height="8" fill={indicatorColor} />
-            </svg>
-          </div>
+              {/* Signal Icon */}
+              <SignalIndicator indicatorColor={indicatorColor} />
+              {/* Wi-Fi Icon */}
+              <WiFiInficator indicatorColor={indicatorColor} />
+              {/* Battery Indicator */}
+              <BatteryIndicator indicatorColor={indicatorColor} />
+            </div>
+          )}
         </div>
       </div>
       <div className="preview__scroll--btns">
         <button
           className={`preview__scroll--btn btn`}
           style={{
-            backgroundColor: buttonColor ? buttonColor : '#004F98',
-            color: buttonTextColor ? buttonTextColor : '#FFF',
+            backgroundColor: buttonColor,
+            color: buttonTextColor,
+            border,
+            borderRadius,
+            fontSize,
+            fontFamily,
+            fontWeight,
+            padding,
           }}
           onClick={showPreviousImage}
         >
@@ -222,8 +168,14 @@ export default function AndroidFrame({
         <button
           className={`preview__scroll--btn btn`}
           style={{
-            backgroundColor: buttonColor ? buttonColor : '#004F98',
-            color: buttonTextColor ? buttonTextColor : '#FFF',
+            backgroundColor: buttonColor,
+            color: buttonTextColor,
+            border,
+            borderRadius,
+            fontSize,
+            fontFamily,
+            fontWeight,
+            padding,
           }}
           onClick={showNextImage}
         >

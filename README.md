@@ -109,7 +109,7 @@ The PhoneFrame component accepts the following props:
 ```typescript
 interface PhoneFrameProps {
   screenshotList: string[]; // List of image URLs to be displayed in the phone frame
-  phoneColor?: string;      // Color of the phone frame
+  deviceColor?: string;      // Color of the phone frame
   buttonColor?: string;     // Background color of the navigation buttons
   buttonTextColor?: string; // Text color of the navigation buttons
 }
@@ -132,7 +132,7 @@ export default function MyApp() {
   return (
     <PhoneFrame 
       screenshotList={screenshotList}
-      phoneColor="#000" // Optional: Color of the phone frame
+      deviceColor="#000" // Optional: Color of the phone frame
       buttonColor="#FFF" // Optional: Background color of the navigation buttons
       buttonTextColor="#000" // Optional: Text color of the navigation buttons
     />

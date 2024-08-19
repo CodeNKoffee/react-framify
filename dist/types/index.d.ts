@@ -1,6 +1,6 @@
 export interface DeviceFrameProps {
     screenshotList: string[];
-    phoneColor?: string;
+    deviceColor?: string;
     buttonColor?: string;
     buttonTextColor?: string;
     statusBar: 'light' | 'dark';

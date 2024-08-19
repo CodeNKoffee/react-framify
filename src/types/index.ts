@@ -1,7 +1,20 @@
+export interface StatusBarProps {
+  mode: 'light' | 'dark';
+}
+
 export interface DeviceFrameProps {
   screenshotList: string[];
-  phoneColor?: string;
-  buttonColor?: string;
-  buttonTextColor?: string;
-  statusBar: 'light' | 'dark'; // Mandatory prop
+  statusBar: StatusBarProps;
+  orientation?: 'portrait' | 'landscape';
+  deviceColor?: string;
+  buttonStyles?: {
+    buttonColor?: string;
+    buttonTextColor?: string;
+    border?: string;
+    borderRadius?: string;
+    fontSize?: string;
+    fontFamily?: string;
+    fontWeight?: string;
+    padding?: string;
+  };
 }

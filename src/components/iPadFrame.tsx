@@ -1,18 +1,24 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState, TouchEvent } from 'react';
-import '../styles/styles.css';
-import { DeviceFrameProps } from '../types';
+import React, { useEffect, useState, TouchEvent } from "react";
+import "../styles/styles.css";
+import { DeviceFrameProps } from "../types";
+import Clock from "../internal/Clock";
+import SignalIndicator from "../internal/SignalIndicator";
+import WiFiInficator from "../internal/WiFiIndicator";
+import BatteryIndicator from "../internal/BatteryIndicator";
 
 export default function IPadFrame({
   screenshotList,
-  phoneColor,
-  buttonColor,
-  buttonTextColor,
+  deviceColor,
+  buttonStyles = {},
+  orientation,
   statusBar,
 }: DeviceFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
+  const [initialTouchPosition, setInitialTouchPosition] = useState<
+    number | null
+  >(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
 
   useEffect(() => {
@@ -61,15 +67,17 @@ export default function IPadFrame({
       setFadeOut(false);
     }, 300);
   };
-
-  const currentTime = new Date().toLocaleTimeString([], { 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: false 
-  });
-
-  const indicatorColor = statusBar === 'light' ? '#FFF' : '#000';
-
+  const indicatorColor = statusBar.mode === "light" ? "#FFF" : "#000";
+  const {
+    buttonColor = "#004F98",
+    buttonTextColor = "#FFF",
+    border = "none",
+    borderRadius = "16px",
+    fontSize = "16px",
+    fontFamily = "Verdana, Geneva, Tahoma, sans-serif",
+    fontWeight = "700",
+    padding = "8px 16px",
+  } = buttonStyles;
   return (
     <figure
       className="phone__frameset--wrapper preview__phone--mockup"
@@ -79,62 +87,41 @@ export default function IPadFrame({
     >
       <div
         style={{
-          boxSizing: 'border-box',
-          position: 'relative',
-          border: `3px solid ${phoneColor ? phoneColor : '#4A5568'}`, 
-          borderRadius: '1.5rem', // Adjusted for iPad-like corners
-          width: '400px', // Adjusted for 4:3 aspect ratio
-          height: '533.33px', // Adjusted for 4:3 aspect ratio
+          boxSizing: "border-box",
+          position: "relative",
+          border: `3px solid ${deviceColor ? deviceColor : "#4A5568"}`,
+          borderRadius: "3rem",
+          width: "250.38px",
+          height: "507.5px",
+          zIndex: 10,
         }}
       >
         <div
           style={{
-            border: '9px solid #000000',
-            borderRadius: '1.3rem',
-            width: '100%',
-            height: '100%',
+            border: "9px solid #000000",
+            borderRadius: "2.8rem",
+            width: "100%",
+            height: "100%",
             zIndex: 100,
           }}
         >
-          {/* <img
-            src={screenshotList[currentImageIndex]}
-            className={`phone__frameset--img ${fadeOut ? 'fade-out' : ''}`}
-            style={{
-              position: 'relative',
-              borderRadius: '0.5rem',
-              width: '100%',
-              height: '102%',
-              zIndex: -1,
-            }}
-          /> */}
           <img
             src={screenshotList[currentImageIndex]}
-            className={`ipad--img ${fadeOut ? 'fade-out' : ''}`}
+            className={`phone__frameset--img ${fadeOut ? "fade-out" : ""}`}
             style={{
-              position: 'absolute', // Change to absolute positioning
+              position: "absolute", // Change to absolute positioning
               top: 0,
               left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              borderRadius: '1.3rem',
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "2.8rem",
               zIndex: -1,
             }}
           />
           {/* Current time of the user opening the site */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '1.1rem', 
-              left: '2rem',
-              color: indicatorColor,
-              fontSize: '10px',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif',
-            }}
-          >
-            {currentTime}
-          </div>
-          {/* iOS Wi-Fi and Signal Indicators */}
+          <Clock indicatorColor={indicatorColor} />
+          
           <div
             style={{
               position: 'absolute',
@@ -147,51 +134,11 @@ export default function IPadFrame({
             }}
           >
             {/* Signal Icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill={indicatorColor}
-              strokeWidth="3"
-              width="14px"
-              height="14px"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M6 16.5h2v2h-2zM10 12.5h2v6h-2zM14 9.5h2v9h-2zM18 5.5h2v13h-2z" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke={indicatorColor}
-              strokeWidth="3"
-              width="12px"
-              height="12px"
-            >
-              {/* Largest Arc */}
-              <path d="M3 9C7 4 17 4 21 9" />
-              {/* Middle Arc */}
-              <path d="M6 13C9 9.5 15 9.5 18 13" />
-              {/* Dot */}
-              <circle cx="12" cy="17" r="1" fill={indicatorColor} />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 25 12"
-              width="16.6"
-              height="8"
-              fill="none"
-              stroke={indicatorColor}
-              strokeWidth="1"
-            >
-              {/* Main battery body */}
-              <rect x="0.5" y="0.5" width="21" height="11" rx="2" ry="2" />
-              
-              {/* Battery terminal */}
-              <path d="M23 4V8" strokeWidth="1.5" strokeLinecap="round" />
-              
-              {/* Battery level (adjust width to change level) */}
-              <rect x="2" y="2" width="18" height="8" fill={indicatorColor} />
-            </svg>
+            <SignalIndicator indicatorColor={indicatorColor} />
+            {/* Wi-Fi Icon */}
+            <WiFiInficator indicatorColor={indicatorColor} />
+            {/* Battery Indicator */}
+            <BatteryIndicator indicatorColor={indicatorColor} />
           </div>
         </div>
       </div>
@@ -199,8 +146,14 @@ export default function IPadFrame({
         <button
           className={`preview__scroll--btn btn`}
           style={{
-            backgroundColor: buttonColor ? buttonColor : '#004F98',
-            color: buttonTextColor ? buttonTextColor : '#FFF',
+            backgroundColor: buttonColor,
+            color: buttonTextColor,
+            border,
+            borderRadius,
+            fontSize,
+            fontFamily,
+            fontWeight,
+            padding,
           }}
           onClick={showPreviousImage}
         >
@@ -209,8 +162,14 @@ export default function IPadFrame({
         <button
           className={`preview__scroll--btn btn`}
           style={{
-            backgroundColor: buttonColor ? buttonColor : '#004F98',
-            color: buttonTextColor ? buttonTextColor : '#FFF',
+            backgroundColor: buttonColor,
+            color: buttonTextColor,
+            border,
+            borderRadius,
+            fontSize,
+            fontFamily,
+            fontWeight,
+            padding,
           }}
           onClick={showNextImage}
         >

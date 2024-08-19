@@ -66,12 +66,14 @@
 
 .preview__scroll--btn {
   position: relative; 
-  border: none;
+  /* remove from here */
+  /* border: none;
   border-radius: 16px;
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
-  padding: 8px 16px;;
+  padding: 8px 16px; */
+  /* till here */
   z-index: 1000; 
   display: flex;
   flex: 1;
