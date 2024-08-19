@@ -87,13 +87,12 @@ export default function IPadFrame({
     >
       <div
         style={{
-          boxSizing: "border-box",
-          position: "relative",
-          border: `3px solid ${deviceColor ? deviceColor : "#4A5568"}`,
-          borderRadius: "3rem",
-          width: "250.38px",
-          height: "507.5px",
-          zIndex: 10,
+          boxSizing: 'border-box',
+          position: 'relative',
+          border: `3px solid ${deviceColor ? deviceColor : '#4A5568'}`, 
+          borderRadius: '1.5rem', // Adjusted for iPad-like corners
+          width: orientation === 'portrait' ? '400px' : '533.33px', // Adjusted for 4:3 aspect ratio
+          height: orientation === 'portrait' ? '533.33px' : '400px', // Adjusted for 4:3 aspect ratio
         }}
       >
         <div
@@ -121,7 +120,7 @@ export default function IPadFrame({
           />
           {/* Current time of the user opening the site */}
           <Clock indicatorColor={indicatorColor} />
-          
+
           <div
             style={{
               position: 'absolute',
