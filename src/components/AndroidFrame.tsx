@@ -69,8 +69,8 @@ export default function AndroidFrame({
 
   const indicatorColor = statusBar.mode === 'light' ? '#FFF' : '#000';
   const {
-    buttonColor = '#004F98',
-    buttonTextColor = '#FFF',
+    backgroundColor = '#004F98',
+    color = '#FFF',
     border = 'none',
     borderRadius = '16px',
     fontSize = '16px',
@@ -152,8 +152,8 @@ export default function AndroidFrame({
         <button
           className={`preview__scroll--btn btn`}
           style={{
-            backgroundColor: buttonColor,
-            color: buttonTextColor,
+            backgroundColor,
+            color,
             border,
             borderRadius,
             fontSize,
@@ -168,8 +168,8 @@ export default function AndroidFrame({
         <button
           className={`preview__scroll--btn btn`}
           style={{
-            backgroundColor: buttonColor,
-            color: buttonTextColor,
+            backgroundColor,
+            color,
             border,
             borderRadius,
             fontSize,

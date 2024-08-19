@@ -8,8 +8,8 @@ export interface DeviceFrameProps {
   orientation?: 'portrait' | 'landscape';
   deviceColor?: string;
   buttonStyles?: {
-    buttonColor?: string;
-    buttonTextColor?: string;
+    backgroundColor?: string;
+    color?: string;
     border?: string;
     borderRadius?: string;
     fontSize?: string;
