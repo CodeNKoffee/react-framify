@@ -7,10 +7,10 @@ export default function DynamicIsland({ orientation }: { orientation: string }) 
         style={{
           position: 'absolute',
           top: orientation === "portrait" ? '1rem' : '50%', 
-          left: orientation === "portrait" ? '50%' : '0.5rem',
+          left: orientation === "portrait" ? '50%' : '5.5%',
           borderRadius: '9999px', 
           backgroundColor: '#000',
-          width: orientation === "portrait" ? '30.33%' : '14%', 
+          width: orientation === "portrait" ? '30.33%' : '16%', 
           padding: '0.4rem',
           transform: orientation === "portrait" ? 'translateX(-50%)' : 'translateY(-50%) rotate(-90deg)',
         }}
