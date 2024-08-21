@@ -126,6 +126,9 @@ Showcasing screenshots in a normal React.js project versus a Next.js project is 
 
 Check out the [YouTube showcase](https://youtu.be/your-youtube-link) for a visual preview of React-Framify in action.
 
+![Preview 1](/assets/how-to-img1.png)
+![Preview 2](/assets/how-to-img2.png)
+
 ## License and Optional Support
 
 React-Framify is open-source and available under the [GNU General Public License v3.0](/LICENSE). If you find our library useful, consider supporting [Hatem Soliman](https://hatemsoliman.dev) via [PayPal](https://paypal.me/h4temsoliman?country.x=EG&locale.x=en_US).
@@ -137,3 +140,18 @@ Join us on this exciting journey to make React-Framify the go-to library for all
 ---
 
 Feel free to adapt and expand upon this documentation as needed. Happy framing! 📱🚀
+
+---
+
+## Launch on Product Hunt 🚀
+
+We're excited to announce that **React-Framify** is now live on Product Hunt! If you love our library and want to support us, please check out our Product Hunt page. Your upvotes and feedback are greatly appreciated!
+
+[![Product Hunt Badge](https://img.shields.io/badge/Product%20Hunt-Follow%20Us%20On%20PH-orange?style=for-the-badge&logo=product-hunt&logoColor=white)](https://www.producthunt.com/posts/react-framify)
+
+### Product Preview
+
+Here are a few sneak peeks at what you can do with React-Framify:
+
+![Preview 1](/assets/product-hunt-img1.png)
+![Preview 2](/assets/product-hunt-img2.png)
