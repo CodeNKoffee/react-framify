@@ -2,7 +2,7 @@
 name: "⚙️ Efficiency & Performance"
 about: Suggest improvements for better efficiency and performance.
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
