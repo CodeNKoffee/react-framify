@@ -1,5 +1,10 @@
 # React-Framify
 
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CodeNKoffee)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/h4temsoliman)
+[![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/h4temsoliman)
+[![Website Badge](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://hatemsoliman.dev)
+
 ## Introduction
 
 React-Framify is a powerful library that allows you to showcase your app screenshots within realistic device frames. Whether you're presenting mobile or tablet designs, React-Framify makes it easy. Check out the [official React-Framify GitHub repository](https://github.com/CodeNKoffee/react-framify) for more details.
@@ -21,7 +26,7 @@ React-Framify supports the following devices:
 To install React-Framify, simply run:
 
 ```bash
-npm install react-framify@2.0.0
+npm install react-framify
 ```
 
 Version 2.0.0 is the major release after our beta launch, and we encourage you to stick with it. If you have an older version installed, make sure to update to the latest.
@@ -42,11 +47,22 @@ import { IPhoneFrame, AndroidFrame, IPadFrame } from "react-framify";
 
 These components accept the following props:
 
-- `screenshotList`: An array of screenshot URLs.
+- `screenshotList`: An array of screenshot URLs (required).
+- `statusBar`: Specify the status bar mode (`light` or `dark`) (required).
 - `deviceColor`: Customize the device frame color (optional).
-- `orientation`: Set to `"portrait"` or `"landscape"` (optional).
-- `statusBar`: Specify the status bar mode (light or dark).
+- `orientation`: Set to `"portrait"` or `"landscape"` (optional) - Default: `"portrait"`.
 - `buttonStyles`: Customize button styles (optional).
+
+#### `buttonStyles`
+
+- `backgroundColor`: `string` (optional) - Default: `'#004F98'`
+- `color`: `string` (optional) - Default: `'#FFF'`
+- `border`: `string` (optional) - Default: `'none'`
+- `borderRadius`: `string` (optional) - Default: `'16px'`
+- `fontSize`: `string` (optional) - Default: `'16px'`
+- `fontFamily`: `string` (optional) - Default: `'Verdana, Geneva, Tahoma, sans-serif'`
+- `fontWeight`: `string` (optional) - Default: `'700'`
+- `padding`: `string` (optional) - Default: `'8px 16px'`
 
 Here's an example using `AndroidFrame`:
 
