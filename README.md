@@ -1,74 +1,65 @@
 # React-Framify
 
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CodeNKoffee)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/h4temsoliman)
-[![Twitter Badge](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/h4temsoliman)
-[![Website Badge](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://hatemsoliman.dev)
+## Introduction
 
-React-Framify is a lightweight and versatile React component library that provides device framesets for showcasing screenshots and images. Whether you're looking to spice up your app presentations or just want to give your project visuals that extra edge, React-Framify has got you covered!
+React-Framify is a powerful library that allows you to showcase your app screenshots within realistic device frames. Whether you're presenting mobile or tablet designs, React-Framify makes it easy. Check out the [official React-Framify GitHub repository](https://github.com/CodeNKoffee/react-framify) for more details.
 
-### Preview
+## Supported React.js
 
-[Click HERE to Watch a Preview!](https://youtu.be/sOgKJdNeMuM?si=90OQjd0lp9-0LaiD)
+React-Framify supports React.js `18.2.0` and above.
 
----
+## Supported Device Framesets
 
-## Exciting News! 🎉
+React-Framify supports the following devices:
 
-As of version **1.3.38**, React-Framify is smoother, faster, and more reliable than ever before! We've ironed out the kinks, ensuring that your experience is seamless and your projects shine. But that's not all - we're committed to making React-Framify even better. Expect new features, framesets, and a whole lot of customization options coming your way. Plus, we're revamping our landing page to make getting started with React-Framify a breeze. Stay tuned!
-
-### Beta Release
-
-After receiving valuable feedback and conducting several iterations, we are pleased to announce that we have achieved a robust beta version in **1.3.38**. This release incorporates numerous improvements and enhancements based on user input, ensuring a more stable and refined product experience. Thank you for your continued support and contributions in helping us reach this milestone.
-
-**Note**: _Versions prior to 1.3.38 may have potential issues and could affect your project's performance. We highly recommend upgrading to the latest version as you're reviewing this library now to enjoy all the improvements and new features!_
-
-## Features
-
-- **Now supports the iPhone 14 Pro frameset**: Showcase your apps in the latest device frames.
-- **Easy navigation**: Effortlessly browse through multiple screenshots or images.
-- **Touch swipe gestures**: A natural and intuitive way to explore images.
-- **Optimized performance**: Enjoy smooth animations without compromising on speed.
-- **Cross-compatibility**: Works beautifully with both ReactJS and ReactTS.
+- **iPhone 14 Pro/15/15 Pro**: These devices feature dynamic island displays.
+- **iPad Pro**: Showcase your tablet designs with precision.
+- **Google Pixel 8/9/9 Pro**: Android users, we've got you covered too!
 
 ## Installation
 
-Get started with React-Framify in no time:
+To install React-Framify, simply run:
 
 ```bash
-npm install react-framify
+npm install react-framify@2.0.0
 ```
 
-or
-
-```bash
-npm install react-framify@latest
-```
+Version 2.0.0 is the major release after our beta launch, and we encourage you to stick with it. If you have an older version installed, make sure to update to the latest.
 
 ## Usage
 
-### How to Use
+### Importing Components
 
-[How to Use React-Framify?](https://youtu.be/8VcSHI2qlkQ)
-
-Dive right in with this simple example of how to use the PhoneFrame component in your React application:
+You can import the following components from React-Framify:
 
 ```jsx
-import PhoneFrame from 'react-framify';
+import { IPhoneFrame, AndroidFrame, IPadFrame } from "react-framify";
+```
 
-export default function MyApp() {
-  const screenshotList = [
-    'screenshot1.png',
-    'screenshot2.png',
-    'screenshot3.png',
-  ];
+### Props
 
-  return (
-    <>
-      <PhoneFrame screenshotList={screenshotList} />;
-    </>
-  )
-}
+#### `IPhoneFrame`, `AndroidFrame`, and `IPadFrame`
+
+These components accept the following props:
+
+- `screenshotList`: An array of screenshot URLs.
+- `deviceColor`: Customize the device frame color (optional).
+- `orientation`: Set to `"portrait"` or `"landscape"` (optional).
+- `statusBar`: Specify the status bar mode (light or dark).
+- `buttonStyles`: Customize button styles (optional).
+
+Here's an example using `AndroidFrame`:
+
+```tsx
+<AndroidFrame
+  screenshotList={screenshotList}
+  deviceColor="#A6A6A6"
+  orientation="portrait"
+  statusBar={{ mode: "light" }}
+  buttonStyles={{
+    backgroundColor: "#1DCDFE",
+  }}
+/>
 ```
 
 ### Using with Next.js
@@ -78,7 +69,6 @@ If you're incorporating React-Framify into a Next.js project, you'll need to han
 ```tsx
 "use client"
 
-import PhoneFrame from "react-framify";
 // Import your images as StaticImageData
 import FrameSetSSOne from "../../../public/img-1.png";
 import FrameSetSSTwo from "../../../public/img-2.png";
@@ -96,54 +86,38 @@ export default function MyApp() {
 
   return (
     <>
-      <PhoneFrame screenshotList={screenshotList} />;
+      <AndroidFrame
+        screenshotList={screenshotList}
+        deviceColor="#A6A6A6"
+        orientation="portrait"
+        statusBar={{ mode: "light" }}
+        buttonStyles={{
+          backgroundColor: "#1DCDFE",
+        }}
+      />
     </>
   )
 }
 ```
 
-### Props
+Feel free to explore additional customization options for `buttonStyles`.
 
-The PhoneFrame component accepts the following props:
+### Implementing Screenshots
 
-```typescript
-interface PhoneFrameProps {
-  screenshotList: string[]; // List of image URLs to be displayed in the phone frame
-  deviceColor?: string;      // Color of the phone frame
-  buttonColor?: string;     // Background color of the navigation buttons
-  buttonTextColor?: string; // Text color of the navigation buttons
-}
-```
+Showcasing screenshots in a normal React.js project versus a Next.js project is straightforward. If you're using Next.js, handle images as StaticImageData for optimal performance.
 
-#### Example
+## Preview
 
-Here’s an example of how to pass these optional props:
+Check out the [YouTube showcase](https://youtu.be/your-youtube-link) for a visual preview of React-Framify in action.
 
-```jsx
-import PhoneFrame from 'react-framify';
+## License and Optional Support
 
-export default function MyApp() {
-  const screenshotList = [
-    'screenshot1.png',
-    'screenshot2.png',
-    'screenshot3.png',
-  ];
+React-Framify is open-source and available under the [GNU General Public License v3.0](/LICENSE). If you find our library useful, consider supporting [Hatem Soliman](https://hatemsoliman.dev) via [PayPal](https://paypal.me/h4temsoliman?country.x=EG&locale.x=en_US).
 
-  return (
-    <PhoneFrame 
-      screenshotList={screenshotList}
-      deviceColor="#000" // Optional: Color of the phone frame
-      buttonColor="#FFF" // Optional: Background color of the navigation buttons
-      buttonTextColor="#000" // Optional: Text color of the navigation buttons
-    />
-  );
-}
-```
+## Join the Journey
 
-## License
-
-React-Framify is proudly licensed under the GNU General Public License v3.0. Check out the LICENSE file for more details.
+Join us on this exciting journey to make React-Framify the go-to library for all your app presentation needs. Your feedback and contributions are what make this project thrive. Let's create something amazing together!
 
 ---
 
-Join us on this exciting journey to make React-Framify the go-to library for all your app presentation needs. Your feedback and contributions are what make this project thrive. Let's create something amazing together!
+Feel free to adapt and expand upon this documentation as needed. Happy framing! 📱🚀
