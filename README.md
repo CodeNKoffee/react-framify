@@ -124,7 +124,7 @@ Showcasing screenshots in a normal React.js project versus a Next.js project is 
 
 ## Preview
 
-Check out the [YouTube showcase](https://youtu.be/your-youtube-link) for a visual preview of React-Framify in action.
+Check out the [YouTube showcase](https://youtu.be/_KoRix1OtKc?si=x34T8xTuyOIlbuFQ) for a visual preview of React-Framify in action.
 
 ![Preview 1](/assets/how-to-img1.png)
 ![Preview 2](/assets/how-to-img2.png)
