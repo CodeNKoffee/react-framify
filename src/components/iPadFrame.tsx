@@ -12,7 +12,7 @@ export default function IPadFrame({
   screenshotList,
   deviceColor,
   buttonStyles = {},
-  orientation,
+  orientation = "portrait",
   statusBar,
 }: DeviceFrameProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
