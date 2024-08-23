@@ -131,7 +131,7 @@ Check out the [YouTube showcase](https://youtu.be/_KoRix1OtKc?si=x34T8xTuyOIlbuF
 
 ## License and Optional Support
 
-React-Framify is open-source and available under the [GNU General Public License v3.0](/LICENSE). If you find our library useful, consider supporting [Hatem Soliman](https://hatemsoliman.dev) via [PayPal](https://paypal.me/h4temsoliman?country.x=EG&locale.x=en_US).
+React-Framify is open-source and available under the [GNU General Public License v3.0](/LICENSE).For information on how to contribute, please see our [Contributing Guidelines](/CONTRIBUTING.md). If you find our library useful, consider supporting [Hatem Soliman](https://hatemsoliman.dev) via [PayPal](https://paypal.me/h4temsoliman?country.x=EG&locale.x=en_US).
 
 ## Join the Journey
 
