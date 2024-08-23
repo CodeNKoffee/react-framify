@@ -29,14 +29,6 @@
   cursor: grab;
 }
 
-/* .phone__frameset--img {
-  height: 100%;
-  min-height: 245.5px;
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 1.5s ease;
-} */
-
 .phone__frameset--img {
   position: absolute;
   top: 0;
@@ -66,14 +58,6 @@
 
 .preview__scroll--btn {
   position: relative; 
-  /* remove from here */
-  /* border: none;
-  border-radius: 16px;
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 700;
-  padding: 8px 16px; */
-  /* till here */
   z-index: 1000; 
   display: flex;
   flex: 1;
@@ -119,14 +103,6 @@
 .ipad__frameset:hover {
   cursor: grab;
 }
-
-/* .ipad__frameset--img {
-  height: 100%;
-  min-height: 682.67px; 
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 1.5s ease;
-} */
 
 .ipad__frameset--img {
   position: absolute;
