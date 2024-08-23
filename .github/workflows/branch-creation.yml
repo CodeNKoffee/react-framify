@@ -7,6 +7,8 @@ on:
 jobs:
   create-branch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout the repository
@@ -51,9 +53,9 @@ jobs:
       id: branch_name
       run: echo "branch_name=${{ env.issue_type }}/REACT-FRAMIFY-${{ env.issue_title }}" >> $GITHUB_ENV
     
-    - name: Create branch
+    - name: Create and push branch
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
-        git checkout -b ${{ env.branch_name }}
+        git checkout -b ${{ env.branch_name }} || git checkout ${{ env.branch_name }}
         git push origin ${{ env.branch_name }}
