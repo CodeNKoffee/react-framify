@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState, TouchEvent } from 'react';
+import React, { useState } from 'react';
 import '../styles/styles.css';
 import { DeviceFrameProps } from "../types";
 import PunchHoleCamera from '../internal/PunchHoleCamera';
