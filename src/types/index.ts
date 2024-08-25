@@ -2,11 +2,14 @@ export interface StatusBarProps {
   mode: 'light' | 'dark';
 }
 
-export interface DeviceFrameProps {
-  screenshotList: string[];
+export interface DeviceFrameProps extends PaginationButtonsProps {
   statusBar: StatusBarProps;
   orientation?: 'portrait' | 'landscape';
   deviceColor?: string;
+}
+
+export interface PaginationButtonsProps {
+  screenshotList: string[];
   buttonStyles?: {
     backgroundColor?: string;
     color?: string;
@@ -17,4 +20,6 @@ export interface DeviceFrameProps {
     fontWeight?: string;
     padding?: string;
   };
+  currentImageIndex: number;
+  setCurrentImageIndex: (index: number) => void;
 }
