@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { PaginationButtonsProps } from "../types";
 
 export default function PaginationButtons({
@@ -9,10 +9,6 @@ export default function PaginationButtons({
 }: PaginationButtonsProps) {
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
   const [fadeOut, setFadeOut] = useState<boolean>(false);
-
-  useEffect(() => {
-    setCurrentImageIndex(0); // Set the initial image index to 0 when the component mounts
-  }, [screenshotList, setCurrentImageIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     const touch = e.touches[0];
@@ -67,7 +63,12 @@ export default function PaginationButtons({
   } = buttonStyles || {};
 
   return (
-    <div className="preview__scroll--btns" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+    <div
+      className="preview__scroll--btns"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <button
         className="preview__scroll--btn btn"
         style={{
