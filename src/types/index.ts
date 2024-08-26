@@ -2,7 +2,7 @@ export interface StatusBarProps {
   mode: 'light' | 'dark';
 }
 
-export interface DeviceFrameProps extends PaginationButtonsProps {
+export interface DeviceFrameProps {
   statusBar: StatusBarProps;
   orientation?: 'portrait' | 'landscape';
   deviceColor?: string;
