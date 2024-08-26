@@ -3,10 +3,10 @@ export interface StatusBarProps {
 }
 
 export interface DeviceFrameProps {
-  screenshotList: string[];
   statusBar: StatusBarProps;
   orientation?: 'portrait' | 'landscape';
   deviceColor?: string;
+  screenshotList: string[];
   buttonStyles?: {
     backgroundColor?: string;
     color?: string;
@@ -17,4 +17,20 @@ export interface DeviceFrameProps {
     fontWeight?: string;
     padding?: string;
   };
+}
+
+export interface PaginationButtonsProps {
+  screenshotList: string[];
+  buttonStyles?: {
+    backgroundColor?: string;
+    color?: string;
+    border?: string;
+    borderRadius?: string;
+    fontSize?: string;
+    fontFamily?: string;
+    fontWeight?: string;
+    padding?: string;
+  };
+  currentImageIndex: number;
+  setCurrentImageIndex: (index: number) => void;
 }
