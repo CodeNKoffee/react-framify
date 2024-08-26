@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import "../styles/styles.css";
 import { DeviceFrameProps } from "../types";
@@ -18,14 +16,11 @@ export default function IPadFrame({
 }: DeviceFrameProps) {
 
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [fadeOut, setFadeOut] = useState<boolean>(false);
   const indicatorColor = statusBar.mode === "light" ? "#FFF" : "#000";
 
   const handleImageChange = (newIndex: number) => {
-    setFadeOut(true);
     setTimeout(() => {
       setCurrentImageIndex(newIndex);
-      setFadeOut(false);
     }, 300);
   };
   
@@ -39,9 +34,9 @@ export default function IPadFrame({
           boxSizing: 'border-box',
           position: 'relative',
           border: `3px solid ${deviceColor ? deviceColor : '#4A5568'}`, 
-          borderRadius: '1.5rem', // Adjusted for iPad-like corners
-          width: orientation === 'portrait' ? '400px' : '533.33px', // Adjusted for 4:3 aspect ratio
-          height: orientation === 'portrait' ? '533.33px' : '400px', // Adjusted for 4:3 aspect ratio
+          borderRadius: '1.5rem',
+          width: orientation === 'portrait' ? '400px' : '533.33px', 
+          height: orientation === 'portrait' ? '533.33px' : '400px', 
         }}
       >
         <div
@@ -55,9 +50,9 @@ export default function IPadFrame({
         >
           <img
             src={screenshotList[currentImageIndex]}
-            className={`phone__frameset--img ${fadeOut ? 'fadeOut' : ''}`}
+            className={`phone__frameset--img`}
             style={{
-              position: "absolute", // Change to absolute positioning
+              position: "absolute",
               top: 0,
               left: 0,
               width: "100%",
@@ -67,7 +62,6 @@ export default function IPadFrame({
               zIndex: -1,
             }}
           />
-          {/* Current time of the user opening the site */}
           <Clock indicatorColor={indicatorColor} />
 
           <div
@@ -81,11 +75,8 @@ export default function IPadFrame({
               color: indicatorColor,
             }}
           >
-            {/* Signal Icon */}
             <SignalIndicator indicatorColor={indicatorColor} />
-            {/* Wi-Fi Icon */}
             <WiFiInficator indicatorColor={indicatorColor} />
-            {/* Battery Indicator */}
             <BatteryIndicator indicatorColor={indicatorColor} />
           </div>
         </div>
@@ -94,7 +85,7 @@ export default function IPadFrame({
         screenshotList={screenshotList}
         buttonStyles={buttonStyles}
         currentImageIndex={currentImageIndex}
-        setCurrentImageIndex={handleImageChange} // Updated to handle fade-out
+        setCurrentImageIndex={handleImageChange}
       />
     </figure>
   );

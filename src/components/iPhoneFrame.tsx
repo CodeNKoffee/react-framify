@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from 'react';
 import '../styles/styles.css';
 import { DeviceFrameProps } from "../types";
@@ -19,14 +17,11 @@ export default function IPhoneFrame({
 }: DeviceFrameProps) {
 
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [fadeOut, setFadeOut] = useState<boolean>(false);
   const indicatorColor = statusBar.mode === "light" ? "#FFF" : "#000";
 
   const handleImageChange = (newIndex: number) => {
-    setFadeOut(true);
     setTimeout(() => {
       setCurrentImageIndex(newIndex);
-      setFadeOut(false);
     }, 300);
   };
 
@@ -54,9 +49,9 @@ export default function IPhoneFrame({
         >
           <img
             src={screenshotList[currentImageIndex]}
-            className={`phone__frameset--img ${fadeOut ? 'fadeOut' : ''}`}
+            className={`phone__frameset--img`}
             style={{
-              position: 'absolute', // Change to absolute positioning
+              position: 'absolute',
               top: 0,
               left: 0,
               width: '100%',
@@ -66,10 +61,8 @@ export default function IPhoneFrame({
               zIndex: -1,
             }}
           />
-          {/* Current time of the user opening the site */}
           {orientation === "portrait" && <Clock indicatorColor={indicatorColor} />}
 
-          {/* Dynamic Island */}
           <DynamicIsland orientation={orientation} />
 
           {orientation === "portrait" && (
@@ -84,11 +77,8 @@ export default function IPhoneFrame({
                 color: indicatorColor,
               }}
             >
-              {/* Signal Icon */}
               <SignalIndicator indicatorColor={indicatorColor} />
-              {/* Wi-Fi Icon */}
               <WiFiInficator indicatorColor={indicatorColor} />
-              {/* Battery Indicator */}
               <BatteryIndicator indicatorColor={indicatorColor} />
             </div>
           )}

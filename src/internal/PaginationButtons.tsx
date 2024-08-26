@@ -8,7 +8,6 @@ export default function PaginationButtons({
   setCurrentImageIndex,
 }: PaginationButtonsProps) {
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null);
-  const [fadeOut, setFadeOut] = useState<boolean>(false);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     const touch = e.touches[0];
@@ -34,20 +33,16 @@ export default function PaginationButtons({
   };
 
   const showPreviousImage = () => {
-    setFadeOut(true);
     setTimeout(() => {
       const newIndex = currentImageIndex === 0 ? screenshotList.length - 1 : currentImageIndex - 1;
-      setCurrentImageIndex(newIndex); // Directly set the new index
-      setFadeOut(false);
+      setCurrentImageIndex(newIndex); 
     }, 300);
   };
 
   const showNextImage = () => {
-    setFadeOut(true);
     setTimeout(() => {
       const newIndex = currentImageIndex === screenshotList.length - 1 ? 0 : currentImageIndex + 1;
-      setCurrentImageIndex(newIndex); // Directly set the new index
-      setFadeOut(false);
+      setCurrentImageIndex(newIndex); 
     }, 300);
   };
 

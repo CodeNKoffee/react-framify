@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from 'react';
 import '../styles/styles.css';
 import { DeviceFrameProps } from "../types";
@@ -19,14 +17,11 @@ export default function AndroidFrame({
 }: DeviceFrameProps) {
   
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [fadeOut, setFadeOut] = useState<boolean>(false);
   const indicatorColor = statusBar.mode === "light" ? "#FFF" : "#000";
 
   const handleImageChange = (newIndex: number) => {
-    setFadeOut(true);
     setTimeout(() => {
       setCurrentImageIndex(newIndex);
-      setFadeOut(false);
     }, 300);
   };
 
@@ -56,9 +51,9 @@ export default function AndroidFrame({
         >
           <img
             src={screenshotList[currentImageIndex]}
-            className={`phone__frameset--img ${fadeOut ? 'fadeOut' : ''}`}
+            className={`phone__frameset--img`}
             style={{
-              position: 'absolute', // Change to absolute positioning
+              position: 'absolute',
               top: 0,
               left: 0,
               width: '100%',
@@ -68,10 +63,8 @@ export default function AndroidFrame({
               zIndex: -1,
             }}
           />
-          {/* Current time of the user opening the site */}
           {orientation === "portrait" && <Clock indicatorColor={indicatorColor} />}
 
-          {/* Camera Hole Punch */}
           <PunchHoleCamera orientation={orientation} />
 
           {orientation === "portrait" && (
@@ -86,11 +79,8 @@ export default function AndroidFrame({
                 color: indicatorColor,
               }}
             >
-              {/* Signal Icon */}
               <SignalIndicator indicatorColor={indicatorColor} />
-              {/* Wi-Fi Icon */}
               <WiFiInficator indicatorColor={indicatorColor} />
-              {/* Battery Indicator */}
               <BatteryIndicator indicatorColor={indicatorColor} />
             </div>
           )}
@@ -100,7 +90,7 @@ export default function AndroidFrame({
         screenshotList={screenshotList}
         buttonStyles={buttonStyles}
         currentImageIndex={currentImageIndex}
-        setCurrentImageIndex={handleImageChange} // Updated to handle fade-out
+        setCurrentImageIndex={handleImageChange} 
       />
     </figure>
   );
