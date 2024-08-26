@@ -6,7 +6,6 @@
   margin-top: 380px;
 }
 
-/* Phone Frameset Styling */
 .phone__frameset--wrapper {
   position: relative;
   top: 50%;
@@ -40,11 +39,6 @@
   transition: opacity 1.5s ease;
 }
 
-/* Image scrolling animation */
-.phone__frameset--img.fade-out {
-  opacity: 0;
-}
-
 .preview__scroll--btns {
   position: relative;
   width: 100%;
@@ -75,47 +69,4 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-}
-
-/* New iPad styles */
-.preview__ipad--mockup {
-  margin-top: 200px; /* Adjusted for larger iPad size */
-}
-
-.ipad__frameset--wrapper {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 512px; /* Doubled size for iPad */
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.ipad__frameset {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-.ipad__frameset:hover {
-  cursor: grab;
-}
-
-.ipad__frameset--img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 1.5s ease;
-}
-
-/* Image scrolling animation */
-.ipad__frameset--img.fade-out {
-  opacity: 0;
 }
