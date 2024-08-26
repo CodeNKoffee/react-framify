@@ -26,7 +26,7 @@ export default function IPhoneFrame({
   };
 
   return (
-    <figure className="phone__frameset--wrapper preview__phone--mockup">
+    <figure className="phone__frameset--wrapper">
       <div
         style={{
           boxSizing: 'border-box',

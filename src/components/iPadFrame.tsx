@@ -25,10 +25,7 @@ export default function IPadFrame({
   };
   
   return (
-    <figure
-      className="phone__frameset--wrapper preview__phone--mockup"
-      
-    >
+    <figure className="phone__frameset--wrapper">
       <div
         style={{
           boxSizing: 'border-box',
@@ -50,7 +47,6 @@ export default function IPadFrame({
         >
           <img
             src={screenshotList[currentImageIndex]}
-            className={`phone__frameset--img`}
             style={{
               position: "absolute",
               top: 0,
