@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/CodeNKoffee/react-framify/issues"
   },
-  "homepage": "https://react-framify.netlify.app/",
+  "homepage": "https://react-framify.hatemsoliman.dev/",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
